@@ -1,0 +1,198 @@
+.booking-page {
+  background: #f6faf7;
+  min-height: 100vh;
+  padding: 45px 0 70px;
+}
+
+.booking-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.booking-heading h1 {
+  color: #0b3045;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.booking-heading p {
+  color: #666;
+  margin: 0;
+}
+
+
+.booking-box {
+  max-width: 950px;
+  margin: auto;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* DATE SECTION */
+
+.booking-date-section {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 25px;
+}
+
+.booking-date-section h3,
+.booking-form h3 {
+  color: #0b3045;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+
+.date-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+
+.date-grid label,
+.room-selection label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+
+.date-grid input,
+.room-selection select {
+  width: 100%;
+  height: 42px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: white;
+}
+
+
+.room-selection {
+  margin-top: 15px;
+}
+
+
+.availability-btn {
+  margin-top: 18px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  background: #238897;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.available-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #eaf8ee;
+  color: #23753b;
+}
+
+
+.unavailable-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #fdecec;
+  color: #b42323;
+}
+
+
+/* GUEST FORM */
+
+.booking-form {
+  padding-top: 25px;
+}
+
+
+.booking-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+
+.booking-form input,
+.booking-form textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  padding: 11px;
+  font-size: 15px;
+}
+
+
+.booking-form textarea {
+  grid-column: span 2;
+  resize: vertical;
+}
+
+
+.book-button {
+  grid-column: span 2;
+  border: none;
+  background: #238897;
+  color: white;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.book-button:hover,
+.availability-btn:hover {
+  opacity: 0.9;
+}
+
+
+.booking-message {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f2f6f7;
+  border-radius: 7px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+
+  .booking-page {
+    padding: 30px 15px 50px;
+  }
+
+  .booking-heading h1 {
+    font-size: 30px;
+  }
+
+  .date-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form {
+    display: block;
+  }
+
+  .booking-form form {
+    display: block;
+  }
+
+  .booking-form input,
+  .booking-form textarea,
+  .book-button {
+    margin-bottom: 12px;
+  }
+
+}

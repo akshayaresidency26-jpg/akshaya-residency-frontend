@@ -1,14 +1,18 @@
-import homeImage from "../Images/Home_img.png";
+import homeImage from "../Images/home_page.png";
 import { Link } from "react-router-dom";
 // import "../Css/Home.css";
 
 function Home() {
   return (
-    <section className="home-section">
+    <section
+      className="home-section"
+      style={{ backgroundImage: `url(${homeImage})` }}
+    >
+      {/* Dark overlay */}
+      <div className="home-overlay"></div>
 
-      <div className="container">
-
-        {/* Heading */}
+      {/* Hero Content */}
+      <div className="container home-content">
         <div className="text-center">
 
           <h1 className="home-title">
@@ -19,34 +23,18 @@ function Home() {
             Experience comfort and relaxation in the heart of Courtallam.
           </p>
 
-        </div>
+          <div className="home-buttons">
+            <Link to="/booking" className="home-action-btn">
+              Book Now
+            </Link>
 
-        {/* Hero Image */}
-        <div className="hero-image-box">
-
-          <img
-            src={homeImage}
-            alt="Akshaya Residency"
-            className="hero-image"
-          />
-
-        </div>
-
-        {/* Buttons */}
-        <div className="text-center mt-5">
-
-          <Link to="/booking" className="btn btn-outline-dark btn-lg ">
-            Book Now
-          </Link>
-
-          <Link to="/rooms" className="btn btn-outline-dark btn-lg ms-2">
-            View Rooms
-          </Link>
+            <Link to="/rooms" className="home-action-btn">
+              View Rooms
+            </Link>
+          </div>
 
         </div>
-
       </div>
-
     </section>
   );
 }

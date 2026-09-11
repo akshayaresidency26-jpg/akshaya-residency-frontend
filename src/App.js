@@ -7,6 +7,7 @@ import Rooms from "./Pages/Rooms";
 import Explore from "./Pages/Explore";
 import ScrollToTop from "./Components/ScrollToTop";
 import Booking from "./Pages/Booking"; 
+
 // 
 function App() {
   return (
@@ -25,3 +26,4 @@ function App() {
 }
 
 export default App;
+

@@ -392,7 +392,7 @@ import "../Css/Booking.css";
 // LOCAL BACKEND
 // ========================================
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://akshaya-residency-backend-1.onrender.com";
 
 
 function Booking() {

@@ -58,6 +58,13 @@ function Navbar() {
               >
                 Book Now
               </Link>
+              
+            </li>
+            <li className="nav-item">
+              <Link className="nav-item btn btn-warning ms-2" to="/admin/login">
+                 Admin Login
+              </Link>
+              
             </li>
 
           </ul>

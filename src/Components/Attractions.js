@@ -9,31 +9,37 @@ import img6 from "../Images/Tenkasi-Thirumali kovil.jpg";
 
 function Attractions() {
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1200,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    arrows: false,
+const settings = {
+  dots: false,
+  infinite: true,
 
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
+  speed: 800,
+
+  slidesToShow: 3,
+  slidesToScroll: 1,
+
+  autoplay: true,
+  autoplaySpeed: 3000,
+
+  arrows: false,
+
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
-    ],
-  };
+    },
+  ],
+};
 
   return (
     <section className="py-5 bg-light">

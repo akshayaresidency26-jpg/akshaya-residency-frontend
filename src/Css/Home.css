@@ -1,808 +1,1044 @@
-/* =========================================================
-   HOME HERO SECTION
-   ========================================================= */
-
-.home-section {
-    width: 100%;
-    min-height: 85vh;
-
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #111;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.home-page {
+  background: #ffffff;
+  color: #2c241f;
 }
 
-
-/* Dark overlay */
-
-.home-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.60) 0%,
-            rgba(0, 0, 0, 0.38) 50%,
-            rgba(0, 0, 0, 0.25) 100%
-        );
-
-    z-index: 1;
+.home-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
 }
 
-
-/* Hero content */
-
-.home-content {
-    position: relative;
-    z-index: 2;
-
-    width: 100%;
-
-    padding-top: 80px;
-    padding-bottom: 80px;
+.section-padding {
+  padding: 80px 0;
 }
 
-
-/* Hero title */
-
-.home-title {
-    color: #ffffff;
-
-    font-size: 56px;
-    font-weight: 700;
-
-    line-height: 1.2;
-
-    margin-bottom: 20px;
-
-    text-shadow:
-        0 3px 8px rgba(0, 0, 0, 0.55);
+.home-hero {
+  min-height: 650px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-
-/* Hero subtitle */
-
-.home-subtitle {
-    color: #ffffff;
-
-    font-size: 20px;
-    line-height: 1.6;
-
-    max-width: 750px;
-
-    margin: 0 auto 30px;
-
-    text-shadow:
-        0 2px 5px rgba(0, 0, 0, 0.55);
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(25, 18, 12, 0.58),
+      rgba(25, 18, 12, 0.74)
+    );
 }
 
-
-/* Hero buttons */
-
-.home-buttons {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(900px, 92%);
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding: 90px 0;
 }
 
-
-.home-action-btn {
-    width: 200px;
-    height: 52px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 8px;
-
-    text-decoration: none;
-
-    font-size: 17px;
-    font-weight: 600;
-
-    color: #ffffff;
-
-    background: #8b5e3c;
-
-    border: 2px solid #8b5e3c;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+.home-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  opacity: 0.92;
 }
 
-
-.home-action-btn:hover {
-    background: #ffffff;
-
-    color: #8b5e3c;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.25);
+.home-hero h1 {
+  max-width: 900px;
+  margin: 0 auto 18px;
+  font-size: clamp(44px, 7vw, 76px);
+  line-height: 1.04;
+  font-weight: 800;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 
-
-/* =========================================================
-   WELCOME SECTION
-   ========================================================= */
-
-.welcome {
-    background: #f8f9fa;
-
-    padding-top: 70px;
-    padding-bottom: 70px;
+.home-hero h2 {
+  margin: 0 0 22px;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 500;
 }
 
-
-.welcome h2 {
-    font-size: 36px;
-    font-weight: 700;
-
-    color: #222;
-
-    margin-bottom: 20px;
+.home-hero p {
+  max-width: 740px;
+  margin: 0 auto 34px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
 }
 
-
-.welcome p {
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    color: #555;
-
-    max-width: 850px;
-
-    margin: 0 auto;
+.home-hero-buttons,
+.home-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-
-/* =========================================================
-   ROOMS SECTION
-   ========================================================= */
-
-.rooms {
-    background: #ffffff;
-
-    padding-top: 70px;
-    padding-bottom: 70px;
+.home-primary-button,
+.home-secondary-button,
+.home-brown-button,
+.home-card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.25s ease;
+  cursor: pointer;
 }
 
-
-.rooms h2 {
-    font-size: 36px;
-
-    font-weight: 700;
-
-    color: #222;
-
-    margin-bottom: 40px;
+.home-primary-button {
+  background: #9a6636;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-weight: 700;
+  border: 1px solid #9a6636;
 }
 
-
-/* =========================================================
-   ROOM CARDS
-   ========================================================= */
-
-.room-card {
-    background: #ffffff;
-
-    border-radius: 15px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.12);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-    height: 100%;
+.home-primary-button:hover {
+  background: #794b25;
+  border-color: #794b25;
+  color: white;
+  transform: translateY(-2px);
 }
 
-
-.room-card:hover {
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.18);
+.home-secondary-button {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  padding: 13px 25px;
+  border-radius: 8px;
+  font-weight: 700;
 }
 
-
-.room-card img {
-    width: 100%;
-
-    height: 300px;
-
-    object-fit: cover;
-
-    display: block;
+.home-secondary-button:hover {
+  background: white;
+  color: #6f4728;
+  transform: translateY(-2px);
 }
 
-
-.room-card h4 {
-    font-size: 24px;
-
-    font-weight: 700;
-
-    color: #222;
-
-    margin: 20px;
+.home-brown-button {
+  background: #8b5a30;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 10px;
 }
 
-
-.room-card p {
-    color: #555;
-
-    line-height: 1.7;
-
-    margin: 0 20px 20px;
+.home-brown-button:hover {
+  background: #683e20;
+  color: white;
+  transform: translateY(-2px);
 }
 
-
-/* =========================================================
-   COURTALLAM SECTION
-   ========================================================= */
-
-.courtallam {
-    background: #f8f9fa;
-
-    padding-top: 70px;
-    padding-bottom: 70px;
+.home-section-heading {
+  max-width: 800px;
+  margin-bottom: 45px;
 }
 
-
-.courtallam h2 {
-    font-size: 36px;
-
-    font-weight: 700;
-
-    color: #222;
-
-    margin-bottom: 20px;
+.home-section-heading.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-.courtallam p {
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    color: #555;
+.home-section-heading > span,
+.home-small-title {
+  display: inline-block;
+  color: #9a6636;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
 }
 
-
-/* =========================================================
-   TOURIST PLACE CARDS / CAROUSEL
-   ========================================================= */
-
-.place-card {
-    overflow: hidden;
-
-    border-radius: 15px;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.15);
-
-    margin-bottom: 10px;
+.home-section-heading h2,
+.home-experience-content h2 {
+  color: #34251b;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
+  margin: 0 0 18px;
 }
 
-
-.place-card img {
-    width: 100%;
-
-    height: 550px;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.5s ease;
+.home-section-heading p,
+.home-experience-content > p {
+  color: #6b625c;
+  font-size: 17px;
+  line-height: 1.8;
 }
 
-
-.place-card img:hover {
-    transform: scale(1.05);
+.home-welcome {
+  background: #ffffff;
 }
 
-
-.place-card h5 {
-    text-align: center;
-
-    padding: 15px;
-
-    margin: 0;
-
-    font-size: 18px;
-
-    font-weight: 600;
-
-    color: #222;
+.home-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-
-/* Slick carousel spacing */
-
-.slick-slide {
-    padding: 0 8px;
+.home-highlight-card {
+  padding: 34px 30px;
+  background: #fffaf5;
+  border: 1px solid #eee4da;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s ease;
 }
 
-
-.slick-list {
-    margin: 0 -8px;
+.home-highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(65, 38, 18, 0.08);
 }
 
+.home-highlight-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f2e2d0;
+  font-size: 31px;
+}
 
-/* =========================================================
-   FOOTER BANNER
-   ========================================================= */
+.home-highlight-card h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  color: #3d2a1b;
+}
 
-.footer-banner {
-    width: 100%;
+.home-highlight-card p {
+  margin: 0;
+  color: #706861;
+  line-height: 1.7;
+}
 
+.home-experience {
+  background: #f7f2ed;
+}
+
+.home-experience-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.home-experience-content {
+  max-width: 700px;
+}
+
+.home-experience-content > p {
+  margin-bottom: 15px;
+}
+
+.home-experience-points {
+  margin: 28px 0;
+  display: grid;
+  gap: 13px;
+}
+
+.home-experience-points div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #493526;
+}
+
+.home-experience-points span {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ead7c2;
+  color: #74491f;
+  font-weight: 800;
+}
+
+.home-experience-card {
+  min-height: 360px;
+  padding: 45px;
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      145deg,
+      #68462a,
+      #9a6636
+    );
+  color: white;
+  box-shadow: 0 18px 45px rgba(70, 40, 20, 0.16);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-experience-card-icon {
+  font-size: 52px;
+  margin-bottom: 18px;
+}
+
+.home-experience-card > span {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.home-experience-card h3 {
+  font-size: 29px;
+  line-height: 1.25;
+  margin: 12px 0;
+}
+
+.home-experience-card p {
+  color: rgba(255, 255, 255, 0.87);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.home-card-link {
+  justify-content: flex-start;
+  color: white;
+  font-weight: 700;
+}
+
+.home-card-link:hover {
+  color: #f4dfc7;
+}
+
+.home-rooms {
+  background: white;
+}
+
+.home-room-feature {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #eadfd5;
+  background: white;
+  box-shadow: 0 15px 40px rgba(65, 38, 18, 0.08);
+}
+
+.home-room-visual {
+  min-height: 420px;
+  padding: 40px;
+  background:
+    linear-gradient(
+      rgba(70, 40, 20, 0.62),
+      rgba(70, 40, 20, 0.76)
+    ),
+    linear-gradient(
+      135deg,
+      #8e6037,
+      #d1a16a
+    );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-room-visual-icon {
+  font-size: 76px;
+  margin-bottom: 20px;
+}
+
+.home-room-visual > span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  opacity: 0.88;
+}
+
+.home-room-visual h3 {
+  font-size: 30px;
+  margin: 12px 0 0;
+}
+
+.home-room-content {
+  padding: 48px;
+}
+
+.home-room-content h3 {
+  margin: 0 0 15px;
+  color: #3d2a1b;
+  font-size: 31px;
+  line-height: 1.25;
+}
+
+.home-room-content > p {
+  color: #706861;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.home-room-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.home-room-features div {
+  padding: 17px;
+  border-radius: 10px;
+  background: #fffaf5;
+  border: 1px solid #eee4da;
+}
+
+.home-room-features span {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.home-room-features strong {
+  color: #493526;
+  font-size: 14px;
+}
+
+.home-places {
+  background: #f8f4ef;
+}
+
+.home-place-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.home-place-card {
+  padding: 28px 23px;
+  background: white;
+  border: 1px solid #ebe1d7;
+  border-radius: 14px;
+  transition: 0.3s ease;
+}
+
+.home-place-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(65, 38, 18, 0.09);
+}
+
+.home-place-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.home-place-card h3 {
+  margin: 0 0 10px;
+  color: #3d2a1b;
+  font-size: 20px;
+}
+
+.home-place-card p {
+  margin: 0;
+  color: #716962;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.home-places-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.home-why {
+  background: white;
+}
+
+.home-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.home-why-card {
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 14px;
+  background: #fffaf5;
+  border: 1px solid #eee4da;
+  transition: 0.3s ease;
+}
+
+.home-why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(65, 38, 18, 0.07);
+}
+
+.home-why-card > div {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.home-why-card h3 {
+  margin: 0 0 9px;
+  font-size: 19px;
+  color: #3d2a1b;
+}
+
+.home-why-card p {
+  margin: 0;
+  color: #706861;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.home-cta {
+  padding: 75px 0;
+  background:
+    linear-gradient(
+      135deg,
+      #6d482a,
+      #9a6636
+    );
+}
+
+.home-cta-box {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.home-cta-box > span {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.home-cta-box h2 {
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.home-cta-box p {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Animations */
+
+@keyframes homeFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-hero-content {
+  animation: homeFadeUp 0.8s ease both;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+  .home-highlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-place-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-experience-card {
     min-height: 300px;
+  }
 
-    background-size: cover;
+  .home-room-feature {
+    grid-template-columns: 1fr;
+  }
 
-    background-position: center;
-
-    background-repeat: no-repeat;
-
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+  .home-room-visual {
+    min-height: 320px;
+  }
 }
 
+/* Mobile */
 
-.footer-banner::before {
-    content: "";
+@media (max-width: 700px) {
 
-    position: absolute;
+  .section-padding {
+    padding: 55px 0;
+  }
 
-    inset: 0;
+  .home-hero {
+    min-height: 600px;
+  }
 
-    background: rgba(0, 0, 0, 0.45);
-}
+  .home-hero-content {
+    padding: 65px 0;
+  }
 
+  .home-hero h1 {
+    font-size: 42px;
+    line-height: 1.12;
+  }
 
-.footer-banner-content {
-    position: relative;
+  .home-hero h2 {
+    font-size: 23px;
+  }
 
-    z-index: 2;
-
-    text-align: center;
-
-    color: #ffffff;
-
-    padding: 40px 20px;
-}
-
-
-.footer-banner-content h2 {
-    font-size: 38px;
-
-    font-weight: 700;
-
-    margin-bottom: 15px;
-}
-
-
-.footer-banner-content p {
-    font-size: 18px;
-
-    margin-bottom: 25px;
-}
-
-
-/* =========================================================
-   FOOTER SECTION
-   ========================================================= */
-
-.footer-section {
-    background: #222222;
-
-    color: #ffffff;
-
-    padding-top: 50px;
-
-    padding-bottom: 30px;
-}
-
-
-.footer-section h4 {
-    font-size: 22px;
-
-    font-weight: 600;
-
-    margin-bottom: 20px;
-}
-
-
-.footer-section p {
-    color: #dddddd;
-
+  .home-hero p {
+    font-size: 16px;
     line-height: 1.7;
+  }
 
-    margin-bottom: 10px;
+  .home-highlight-grid,
+  .home-place-grid,
+  .home-why-grid,
+  .home-room-features {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section-heading h2,
+  .home-experience-content h2 {
+    font-size: 31px;
+  }
+
+  .home-section-heading p,
+  .home-experience-content > p {
+    font-size: 16px;
+  }
+
+  .home-experience-card {
+    padding: 32px;
+  }
+
+  .home-room-content {
+    padding: 30px;
+  }
+
+  .home-room-visual {
+    min-height: 280px;
+    padding: 30px;
+  }
+
+  .home-room-visual h3 {
+    font-size: 26px;
+  }
+
+  .home-room-content h3 {
+    font-size: 27px;
+  }
+
+  .home-cta {
+    padding: 55px 0;
+  }
+
+  .home-hero-buttons,
+  .home-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-primary-button,
+  .home-secondary-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
-
-.footer-section a {
-    color: #dddddd;
-
-    text-decoration: none;
-
-    transition: color 0.3s ease;
-}
-
-
-.footer-section a:hover {
-    color: #c89b6d;
-}
-
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-
-    margin-top: 30px;
-
-    padding-top: 20px;
-
-    text-align: center;
-
-    color: #aaaaaa;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   TABLET RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 992px) {
-
-    .home-section {
-        min-height: 90vh;
-
-        background-size: cover;
-
-        background-position: center center;
-    }
-
-
-    .home-content {
-        padding-left: 25px;
-
-        padding-right: 25px;
-    }
-
-
-    .home-title {
-        font-size: 48px;
-    }
-
-
-    .home-subtitle {
-        font-size: 19px;
-    }
-
-
-    .place-card img {
-        height: 500px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    /* Hero */
-
-    .home-section {
-        min-height: 100vh;
-
-        background-size: cover;
-
-        background-position: center center;
-
-        background-repeat: no-repeat;
-    }
-
-
-    .home-overlay {
-        background: rgba(0, 0, 0, 0.48);
-    }
-
-
-    .home-content {
-        padding-left: 20px;
-
-        padding-right: 20px;
-
-        padding-top: 60px;
-
-        padding-bottom: 60px;
-    }
-
-
-    .home-title {
-        font-size: 40px;
-
-        line-height: 1.25;
-
-        margin-bottom: 15px;
-    }
-
-
-    .home-subtitle {
-        font-size: 18px;
-
-        padding: 0 10px;
-
-        line-height: 1.5;
-
-        margin-bottom: 25px;
-    }
-
-
-    .home-buttons {
-        flex-direction: column;
-
-        gap: 12px;
-    }
-
-
-    .home-action-btn {
-        width: 210px;
-
-        height: 52px;
-    }
-
-
-    /* Welcome */
-
-    .welcome {
-        padding-top: 50px;
-
-        padding-bottom: 50px;
-    }
-
-
-    .welcome h2 {
-        font-size: 30px;
-    }
-
-
-    .welcome p {
-        font-size: 16px;
-
-        padding: 0 15px;
-    }
-
-
-    /* Rooms */
-
-    .rooms {
-        padding-top: 50px;
-
-        padding-bottom: 50px;
-    }
-
-
-    .rooms h2 {
-        font-size: 30px;
-    }
-
-
-    .room-card img {
-        height: 280px;
-    }
-
-
-    /* Courtallam */
-
-    .courtallam {
-        padding-top: 50px;
-
-        padding-bottom: 50px;
-    }
-
-
-    .courtallam h2 {
-        font-size: 30px;
-    }
-
-
-    .courtallam p {
-        font-size: 16px;
-    }
-
-
-    /* Tourist carousel */
-
-    .place-card {
-        border-radius: 12px;
-    }
-
-
-    .place-card img {
-        height: 450px;
-    }
-
-
-    .place-card h5 {
-        font-size: 17px;
-
-        padding: 14px 10px;
-    }
-
-
-    /* Footer banner */
-
-    .footer-banner {
-        min-height: 250px;
-    }
-
-
-    .footer-banner-content h2 {
-        font-size: 30px;
-    }
-
-
-    .footer-banner-content p {
-        font-size: 16px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 576px) {
-
-    .home-section {
-        min-height: 100svh;
-
-        background-size: cover;
-
-        background-position: center center;
-    }
-
-
-    .home-title {
-        font-size: 36px;
-    }
-
-
-    .home-subtitle {
-        font-size: 17px;
-
-        padding: 0 5px;
-    }
-
-
-    .home-action-btn {
-        width: 205px;
-
-        height: 50px;
-
-        font-size: 16px;
-    }
-
-
-    .place-card {
-        border-radius: 12px;
-    }
-
-
-    .place-card img {
-        height: 400px;
-    }
-
-
-    .place-card h5 {
-        font-size: 17px;
-
-        padding: 14px 10px;
-    }
-
-
-    .slick-slide {
-        padding: 0 5px;
-    }
-
-
-    .slick-list {
-        margin: 0 -5px;
-    }
-
-
-    .footer-banner-content h2 {
-        font-size: 27px;
-    }
-
-
-    .footer-section {
-        padding-top: 40px;
-
-        padding-bottom: 25px;
-    }
-}
-
-
-/* =========================================================
-   EXTRA SMALL MOBILE
-   ========================================================= */
+/* small mobile */
 
 @media (max-width: 480px) {
 
-    .home-section {
-        min-height: 100svh;
+  .home-container {
+    width: 90%;
+  }
 
-        background-size: cover;
+  .home-hero {
+    min-height: 100svh;
+  }
 
-        background-position: center center;
-    }
+  .home-hero-content {
+    padding: 55px 0;
+  }
+
+  .home-eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .home-hero h1 {
+    font-size: 35px;
+  }
+
+  .home-hero h2 {
+    font-size: 21px;
+  }
+
+  .home-hero p {
+    font-size: 15px;
+  }
+
+  .home-highlight-card {
+    padding: 28px 23px;
+  }
+
+  .home-experience-card {
+    padding: 28px;
+  }
+
+  .home-experience-card h3 {
+    font-size: 25px;
+  }
+
+  .home-room-content {
+    padding: 25px;
+  }
+
+  .home-room-visual {
+    min-height: 250px;
+  }
+
+  .home-room-content h3 {
+    font-size: 25px;
+  }
+
+  .home-why-card {
+    padding: 26px 18px;
+  }
+
+  .home-cta-box h2 {
+    font-size: 30px;
+  }
+
+  .home-cta-box p {
+    font-size: 15px;
+  }
+}
+
+   /* Cortralam destination section */
+
+.courtallam {
+  position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      #f8f4ef 0%,
+      #fffaf5 50%,
+      #f5eee7 100%
+    );
+  padding-top: 90px !important;
+  padding-bottom: 90px !important;
+  overflow: hidden;
+}
+
+/* Decorative background shapes */
+
+.courtallam::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(154, 102, 54, 0.07);
+  top: -120px;
+  left: -100px;
+}
+
+.courtallam::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(139, 90, 48, 0.05);
+  right: -160px;
+  bottom: -180px;
+}
+
+/* Keep content above decorations */
+
+.courtallam .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Small eyebrow */
+
+.courtallam::marker {
+  display: none;
+}
+
+/* Main heading */
+
+.courtallam h2 {
+  position: relative;
+  display: inline-block;
+  color: #34251b;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+/* Small decorative line below heading */
+
+.courtallam h2::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 3px;
+  margin: 15px auto 0;
+  border-radius: 10px;
+  background: #9a6636;
+}
+
+/* Subtitle */
+
+.courtallam h4 {
+  color: #9a6636 !important;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 28px !important;
+}
+
+/* Main description */
+
+.courtallam-text {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #6b625c;
+  font-size: 17px;
+  line-height: 1.9;
+  text-align: center;
+}
 
 
-    .home-title {
-        font-size: 34px;
-    }
+/* Highlight first sentence feel */
+
+.courtallam-text::first-letter {
+  font-size: 24px;
+  font-weight: 700;
+  color: #8b5a30;
+}
+
+/* Explore button */
+
+.courtallam .btn-warning 
+{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 165px;
+  min-height: 50px;
+  background: #9a6636 !important;
+  border: 1px solid #9a6636 !important;
+  border-radius: 8px;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(108, 67, 34, 0.18);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Button hover */
+
+.courtallam .btn-warning:hover 
+{
+  background: #794b25 !important;
+  border-color: #794b25 !important;
+  color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(108, 67, 34, 0.25);
+}
 
 
-    .home-subtitle {
-        font-size: 16px;
+/* Button arrow */
 
-        line-height: 1.5;
-    }
+.courtallam .btn-warning::after {
+  content: "→";
+  margin-left: 10px;
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.courtallam .btn-warning:hover::after {
+  transform: translateX(4px);
+}
+
+.courtallam .text-center 
+{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 50px 55px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #eadfd5;
+  border-radius: 20px;
+  box-shadow: 0 18px 50px rgba(65, 38, 18, 0.07);
+  backdrop-filter: blur(4px);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .courtallam {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .courtallam .text-center {
+    padding: 35px 25px;
+    border-radius: 16px;
+  }
+
+  .courtallam h2 {
+    font-size: 32px;
+  }
+
+  .courtallam h4 {
+    font-size: 19px;
+  }
+
+  .courtallam-text {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .courtallam .btn-warning {
+    width: 190px;
+  }
+}
 
 
-    .home-action-btn {
-        width: 200px;
+@media (max-width: 480px) {
 
-        height: 50px;
+  .courtallam {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
 
-        font-size: 16px;
-    }
+  .courtallam .text-center {
+    padding: 30px 20px;
+    border-radius: 14px;
+  }
+
+  .courtallam h2 {
+    font-size: 29px;
+  }
+
+  .courtallam h4 {
+    font-size: 18px;
+    margin-bottom: 22px !important;
+  }
+
+  .courtallam-text {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .courtallam .btn-warning {
+    width: 100%;
+    max-width: 210px;
+  }
+}
+
+@media (max-width: 991px) {
+  .home-hero {
+    min-height: 560px;
+    height: auto;
+  }
+
+  .home-hero-content {
+    padding: 100px 25px 80px;
+  }
+}
 
 
-    .welcome h2,
-    .rooms h2,
-    .courtallam h2 {
-        font-size: 28px;
-    }
+@media (max-width: 576px) {
+  .home-hero {
+    min-height: 620px;
+    height: auto;
+
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .home-hero-content {
+    width: 100%;
+    padding: 95px 18px 90px;
+  }
+
+  .home-hero-content h1 {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  .home-hero-content p {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-hero-content .btn,
+  .home-hero-content a {
+    margin-top: 20px;
+  }
+}
 
 
-    .place-card img {
-        height: 380px;
-    }
+@media (max-width: 380px) {
+  .home-hero {
+    min-height: 650px;
+  }
+
+  .home-hero-content {
+    padding: 85px 15px 95px;
+  }
+
+  .home-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .home-hero-content p {
+    font-size: 13px;
+  }
 }

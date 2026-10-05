@@ -8,7 +8,6 @@ function AboutBanner() {
       style={{ backgroundImage: `url(${banner})` }}
     >
       <div className="about-overlay">
-        {/* <h1>About Us</h1> */}
       </div>
     </section>
   );

@@ -1,95 +1,102 @@
-import {
-  FaMapMarkerAlt,
-  FaCalendarAlt,
-  FaPhoneAlt
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaCalendarAlt, FaPhoneAlt} from "react-icons/fa";
 
 function ContactInfo() {
   return (
-    <>
+    <div className="contact-info-list">
 
-      <div className="contact-card d-flex">
+      {/* Address */}
+      <div className="contact-card">
 
-        <div className="icon">
+        <div className="contact-card-icon">
           <FaMapMarkerAlt />
         </div>
 
-        <div>
-          <h4>ADDRESS</h4>
+        <div className="contact-card-content">
+
+          <span>VISIT US</span>
+
+          <h4>Our Address</h4>
 
           <p>
             Akshaya Residency<br />
-            Courtallam,
-            Tenkasi District,
+            Courtallam,<br />
+            Tenkasi District,<br />
             Tamil Nadu - 627802.
           </p>
 
+          <a
+            href="https://maps.app.goo.gl/BWEoFHMfWNaHyXQ18?g_st=aw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-card-link"
+          >
+            View on Google Maps →
+          </a>
+
         </div>
 
       </div>
 
-      <div className="contact-card d-flex">
 
-        <div className="icon">
+      {/* Booking */}
+      <div className="contact-card">
+
+        <div className="contact-card-icon">
           <FaCalendarAlt />
         </div>
 
-        <div>
-          <h4>ROOM BOOKING</h4>
+        <div className="contact-card-content">
 
-          {/* <p>
-            info@akshayaresidency.com
-          </p> */}
+          <span>RESERVATIONS</span>
+
+          <h4>Room Booking</h4>
 
           <p>
-            zankrapet@gmail.com
+            For room availability and booking enquiries,
+            get in touch with our team.
           </p>
+
+          <a
+            href="mailto:zankarpet@gmail.com"
+            className="contact-card-link"
+          >
+            zankarpet@gmail.com →
+          </a>
 
         </div>
 
       </div>
 
-      {/* <div className="contact-card d-flex">
+      {/* Phone */}
+      <div className="contact-card">
 
-        <div className="icon">
-          <FaHotel />
-        </div>
-
-        <div>
-
-          <h4>HOTEL</h4>
-
-          <p>
-            +91 9715172185
-          </p>
-
-          <p>
-            +91 9715172185
-          </p>
-
-        </div>
-
-      </div> */}
-
-      <div className="contact-card d-flex">
-
-        <div className="icon">
+        <div className="contact-card-icon">
           <FaPhoneAlt />
         </div>
 
-        <div>
+        <div className="contact-card-content">
 
-          <h4>RECEPTION</h4>
+          <span>RECEPTION</span>
+
+          <h4>Call Us</h4>
 
           <p>
-            +91 9715172185
+            Speak directly with our reception team
+            for assistance and enquiries.
           </p>
+
+          <a
+            href="tel:+919715172185"
+            className="contact-card-link"
+          >
+            +91 9715172185 →
+          </a>
 
         </div>
 
       </div>
 
-    </>
+    </div>
   );
 }
 

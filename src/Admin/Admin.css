@@ -13,10 +13,7 @@
     sans-serif;
 }
 
-
-/* =========================
-   SIDEBAR
-========================= */
+   /* SIDEBAR */
 
 .admin-sidebar {
   width: 250px;
@@ -31,14 +28,12 @@
   height: 100vh;
 }
 
-
 .admin-brand {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 5px 8px 35px;
 }
-
 
 .admin-brand-logo,
 .admin-logo {
@@ -57,25 +52,21 @@
   font-weight: 800;
 }
 
-
 .admin-brand strong {
   display: block;
   font-size: 17px;
 }
-
 
 .admin-brand span {
   color: #c8bfb3;
   font-size: 12px;
 }
 
-
 .admin-sidebar nav {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 
 .admin-sidebar nav button {
   border: 0;
@@ -88,13 +79,11 @@
   font-size: 14px;
 }
 
-
 .admin-sidebar nav button:hover,
 .admin-sidebar nav button.active {
   background: #382f27;
   color: white;
 }
-
 
 .logout-button {
   margin-top: auto;
@@ -106,56 +95,11 @@
   cursor: pointer;
 }
 
-
 .logout-button:hover {
   background: #3c3027;
 }
 
-
-/* =========================
-   MAIN
-========================= */
-
-.admin-main {
-  flex: 1;
-  padding: 35px;
-  min-width: 0;
-}
-
-
-.admin-topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-
-.admin-topbar h1 {
-  margin: 0;
-  font-family: Georgia, serif;
-  font-size: 32px;
-}
-
-
-.admin-topbar p {
-  margin: 7px 0 0;
-  color: #81786e;
-}
-
-
-.refresh-button {
-  border: 1px solid #ddd2c4;
-  background: white;
-  padding: 11px 17px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-
-/* =========================
-   STAT CARDS
-========================= */
+   /* STAT CARDS */
 
 .stats-grid {
   display: grid;
@@ -163,7 +107,6 @@
     repeat(4, 1fr);
   gap: 18px;
 }
-
 
 .stat-card {
   background: white;
@@ -175,12 +118,10 @@
     rgba(40, 30, 20, 0.04);
 }
 
-
 .stat-card span {
   color: #81786e;
   font-size: 13px;
 }
-
 
 .stat-card strong {
   display: block;
@@ -188,26 +129,21 @@
   margin: 10px 0 4px;
 }
 
-
 .stat-card small {
   color: #a39a91;
 }
-
 
 .stat-card.pending {
   border-top: 4px solid #d99a26;
 }
 
-
 .stat-card.confirmed {
   border-top: 4px solid #3c9a62;
 }
 
-
 .stat-card.cancelled {
   border-top: 4px solid #c95b5b;
 }
-
 
 .today-grid {
   display: grid;
@@ -217,7 +153,6 @@
   margin-top: 18px;
 }
 
-
 .today-card {
   background: #2c251e;
   color: white;
@@ -225,11 +160,9 @@
   padding: 22px;
 }
 
-
 .today-card span {
   color: #c9bfb2;
 }
-
 
 .today-card strong {
   display: block;
@@ -237,54 +170,13 @@
   margin-top: 8px;
 }
 
-
-/* =========================
-   SECTION
-========================= */
-
-.admin-section {
-  background: white;
-  border: 1px solid #ebe4db;
-  border-radius: 20px;
-  margin-top: 25px;
-  padding: 25px;
-  box-shadow:
-    0 8px 30px
-    rgba(40, 30, 20, 0.04);
-}
-
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 22px;
-}
-
-
-.section-header h2 {
-  margin: 0;
-  font-family: Georgia, serif;
-}
-
-
-.section-header p {
-  margin: 6px 0 0;
-  color: #91887f;
-  font-size: 13px;
-}
-
-
-/* =========================
-   CALENDAR
-========================= */
+   /* CALENDAR */
 
 .calendar-controls {
   display: flex;
   align-items: center;
   gap: 18px;
 }
-
 
 .calendar-controls button {
   width: 34px;
@@ -296,7 +188,6 @@
   font-size: 20px;
 }
 
-
 .calendar-grid {
   display: grid;
   grid-template-columns:
@@ -304,7 +195,6 @@
   border-top: 1px solid #eee8e0;
   border-left: 1px solid #eee8e0;
 }
-
 
 .calendar-day-name {
   padding: 12px;
@@ -316,7 +206,6 @@
   border-bottom: 1px solid #eee8e0;
 }
 
-
 .calendar-cell {
   min-height: 105px;
   padding: 8px;
@@ -325,7 +214,6 @@
   background: white;
 }
 
-
 .calendar-empty {
   min-height: 105px;
   background: #faf9f7;
@@ -333,13 +221,11 @@
   border-bottom: 1px solid #eee8e0;
 }
 
-
 .calendar-number {
   display: block;
   font-weight: 700;
   margin-bottom: 7px;
 }
-
 
 .calendar-booking {
   display: block;
@@ -356,24 +242,20 @@
   text-overflow: ellipsis;
 }
 
-
 .calendar-booking.confirmed {
   background: #dcfce7;
   color: #166534;
 }
-
 
 .calendar-booking.pending {
   background: #fef3c7;
   color: #92400e;
 }
 
-
 .more-bookings {
   font-size: 10px;
   color: #81786e;
 }
-
 
 .calendar-legend {
   display: flex;
@@ -382,13 +264,11 @@
   font-size: 12px;
 }
 
-
 .calendar-legend span {
   display: flex;
   align-items: center;
   gap: 7px;
 }
-
 
 .legend {
   width: 10px;
@@ -396,27 +276,21 @@
   border-radius: 3px;
 }
 
-
 .legend.pending {
   background: #fbbf24;
 }
-
 
 .legend.confirmed {
   background: #22c55e;
 }
 
-
-/* =========================
-   FILTERS
-========================= */
+   /* Filters */
 
 .booking-filters {
   display: flex;
   gap: 12px;
   margin-bottom: 20px;
 }
-
 
 .booking-filters input {
   flex: 1;
@@ -426,12 +300,10 @@
   outline: none;
 }
 
-
 .booking-filters input:focus,
 .booking-filters select:focus {
   border-color: #a87948;
 }
-
 
 .booking-filters select {
   border: 1px solid #ddd5ca;
@@ -440,22 +312,95 @@
   background: white;
 }
 
+   /* Check In/ Check Out */
 
-/* =========================
-   TABLE
-========================= */
+.stay-section {
+  margin-top: 30px;
+}
+
+.stay-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.stay-section-header h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.stay-section-header p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.stay-count {
+  min-width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f1f1f1;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.actual-time {
+  font-weight: 600;
+}
+
+.not-recorded {
+  color: #888;
+  font-size: 13px;
+}
+
+.stay-section .booking-table-wrapper {
+  margin-bottom: 35px;
+}
+
+.stay-section .confirm-button {
+  white-space: nowrap;
+}
+
+.stay-section .booking-table td {
+  vertical-align: middle;
+}
+
+.stay-section .booking-table th {
+  white-space: nowrap;
+}
+
+   /* Mobile */
+
+@media (max-width: 768px) {
+  .stay-section-header {
+    align-items: flex-start;
+  }
+
+  .stay-section .booking-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .stay-section .booking-table {
+    min-width: 850px;
+  }
+}
+
+   /* Table */
 
 .booking-table-wrapper {
   overflow-x: auto;
 }
-
 
 .booking-table {
   width: 100%;
   border-collapse: collapse;
   min-width: 900px;
 }
-
 
 .booking-table th {
   text-align: left;
@@ -465,7 +410,6 @@
   font-size: 12px;
 }
 
-
 .booking-table td {
   padding: 15px 14px;
   border-bottom: 1px solid #eee8e0;
@@ -473,18 +417,15 @@
   font-size: 13px;
 }
 
-
 .booking-table td strong {
   display: block;
 }
-
 
 .booking-table td small {
   display: block;
   color: #91887f;
   margin-top: 4px;
 }
-
 
 .status,
 .payment {
@@ -496,13 +437,11 @@
   text-transform: capitalize;
 }
 
-
 .status.pending,
 .payment.pending {
   background: #fef3c7;
   color: #92400e;
 }
-
 
 .status.confirmed,
 .payment.received {
@@ -510,12 +449,10 @@
   color: #166534;
 }
 
-
 .status.cancelled {
   background: #fee2e2;
   color: #991b1b;
 }
-
 
 .view-button {
   border: 0;
@@ -526,17 +463,13 @@
   cursor: pointer;
 }
 
-
 .empty-table {
   text-align: center;
   padding: 40px !important;
   color: #8e857c;
 }
 
-
-/* =========================
-   MODAL
-========================= */
+   /* Modal */
 
 .admin-modal-overlay {
   position: fixed;
@@ -551,7 +484,6 @@
   z-index: 9999;
 }
 
-
 .admin-modal {
   width: min(720px, 100%);
   max-height: 90vh;
@@ -561,7 +493,6 @@
   padding: 30px;
   position: relative;
 }
-
 
 .modal-close {
   position: absolute;
@@ -576,7 +507,6 @@
   cursor: pointer;
 }
 
-
 .modal-heading {
   display: flex;
   justify-content: space-between;
@@ -585,18 +515,15 @@
   margin-bottom: 25px;
 }
 
-
 .modal-heading span:first-child {
   color: #948b82;
   font-size: 12px;
 }
 
-
 .modal-heading h2 {
   margin: 5px 0 0;
   font-family: Georgia, serif;
 }
-
 
 .details-grid {
   display: grid;
@@ -604,7 +531,6 @@
     repeat(2, 1fr);
   gap: 20px;
 }
-
 
 .details-grid label,
 .message-box label {
@@ -615,21 +541,17 @@
   text-transform: uppercase;
 }
 
-
 .details-grid strong {
   font-size: 14px;
 }
-
 
 .text-success {
   color: #15803d;
 }
 
-
 .text-warning {
   color: #b45309;
 }
-
 
 .message-box {
   margin-top: 25px;
@@ -638,12 +560,10 @@
   border-radius: 12px;
 }
 
-
 .message-box p {
   margin: 0;
   color: #5f574f;
 }
-
 
 .payment-warning {
   margin-top: 20px;
@@ -654,19 +574,16 @@
   color: #9a3412;
 }
 
-
 .payment-warning p {
   margin: 5px 0 0;
   font-size: 13px;
 }
-
 
 .modal-actions {
   display: flex;
   gap: 10px;
   margin-top: 25px;
 }
-
 
 .confirm-button,
 .cancel-button {
@@ -678,22 +595,17 @@
   font-weight: 700;
 }
 
-
 .confirm-button {
   background: #15803d;
   color: white;
 }
-
 
 .cancel-button {
   background: #fee2e2;
   color: #991b1b;
 }
 
-
-/* =========================
-   LOGIN
-========================= */
+   /* Login */
 
 .admin-login-page {
   min-height: 100vh;
@@ -709,7 +621,6 @@
   padding: 20px;
 }
 
-
 .admin-login-card {
   width: min(420px, 100%);
   background: rgba(255,255,255,0.97);
@@ -720,11 +631,9 @@
     rgba(0,0,0,0.25);
 }
 
-
 .admin-login-card .admin-logo {
   margin: auto;
 }
-
 
 .admin-login-card h1 {
   text-align: center;
@@ -732,13 +641,11 @@
   font-family: Georgia, serif;
 }
 
-
 .admin-subtitle {
   text-align: center;
   color: #8d8379;
   margin-bottom: 28px;
 }
-
 
 .admin-login-card label {
   display: block;
@@ -747,7 +654,6 @@
   margin: 15px 0 7px;
 }
 
-
 .admin-login-card input {
   width: 100%;
   padding: 13px;
@@ -755,7 +661,6 @@
   border-radius: 10px;
   outline: none;
 }
-
 
 .admin-login-button {
   width: 100%;
@@ -769,7 +674,6 @@
   cursor: pointer;
 }
 
-
 .admin-error {
   padding: 13px;
   margin-bottom: 18px;
@@ -777,7 +681,6 @@
   background: #fee2e2;
   color: #991b1b;
 }
-
 
 .admin-loading {
   min-height: 100vh;
@@ -787,10 +690,7 @@
   background: #f6f4f0;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+   /* Mobile */
 
 @media (max-width: 1000px) {
 
@@ -799,22 +699,18 @@
     padding: 20px 10px;
   }
 
-
   .admin-brand div:last-child {
     display: none;
   }
-
 
   .admin-sidebar nav button {
     font-size: 0;
     text-align: center;
   }
 
-
   .admin-sidebar nav button::first-letter {
     font-size: 18px;
   }
-
 
   .stats-grid {
     grid-template-columns:
@@ -823,33 +719,27 @@
 
 }
 
-
 @media (max-width: 700px) {
 
   .admin-main {
     padding: 18px;
   }
 
-
   .admin-topbar {
     align-items: flex-start;
   }
-
 
   .admin-topbar h1 {
     font-size: 25px;
   }
 
-
   .stats-grid {
     grid-template-columns: 1fr;
   }
 
-
   .today-grid {
     grid-template-columns: 1fr;
   }
-
 
   .section-header {
     flex-direction: column;
@@ -857,19 +747,200 @@
     gap: 15px;
   }
 
-
   .booking-filters {
     flex-direction: column;
   }
-
 
   .details-grid {
     grid-template-columns: 1fr;
   }
 
-
   .modal-actions {
     flex-direction: column;
   }
 
+}
+
+   /* Admin dashboard fixes */
+
+.admin-section {
+  scroll-margin-top: 20px;
+}
+
+.stay-section {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.stay-section + .stay-section {
+  margin-top: 35px;
+}
+
+.stay-section-header {
+  padding: 0 0 12px;
+}
+
+.actual-time {
+  font-weight: 700;
+  color: #15803d;
+}
+
+.not-recorded {
+  color: #91887f;
+}
+
+.stay-count {
+  background: #f3eee8;
+  color: #29251f;
+}
+
+.booking-table button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.booking-table .status {
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .admin-sidebar {
+    width: 70px;
+  }
+
+  .admin-main {
+    padding: 18px 12px;
+  }
+
+  .admin-section {
+    padding: 18px;
+  }
+
+  .admin-topbar {
+    gap: 12px;
+  }
+
+  .refresh-button {
+    white-space: nowrap;
+  }
+}
+
+   /* Booking Result count */
+
+.booking-results-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -8px 0 15px;
+  color: #91887f;
+  font-size: 12px;
+}
+
+.booking-results-info strong {
+  color: #29251f;
+}
+
+   /* Pagination */
+
+.booking-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #eee8e0;
+}
+
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pagination-button,
+.pagination-number {
+  border: 1px solid #ddd5ca;
+  background: white;
+  color: #4d443b;
+  cursor: pointer;
+  border-radius: 8px;
+  min-height: 36px;
+}
+
+.pagination-button {
+  padding: 8px 13px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pagination-number {
+  width: 36px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.pagination-number:hover,
+.pagination-button:hover:not(:disabled) {
+  border-color: #a87948;
+  background: #faf6f0;
+}
+
+.pagination-number.active {
+  background: #29231d;
+  color: white;
+  border-color: #29231d;
+}
+
+.pagination-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+   /* Id Status */
+
+.text-danger {
+  color: #b91c1c;
+}
+
+   /* Responsive Pagination */
+
+@media (max-width: 700px) {
+  .booking-results-info {
+    margin-top: -4px;
+    margin-bottom: 12px;
+  }
+
+  .booking-pagination {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pagination-pages {
+    order: -1;
+  }
+
+  .pagination-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .pagination-pages {
+    gap: 4px;
+  }
+
+  .pagination-number {
+    width: 32px;
+    min-height: 32px;
+  }
+
+  .pagination-button {
+    min-height: 34px;
+    padding: 7px 10px;
+  }
 }

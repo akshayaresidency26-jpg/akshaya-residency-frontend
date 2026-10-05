@@ -1,17 +1,14 @@
-import { Link } from "react-router-dom";
-
 function Courtallam() {
   return (
-    <section className="courtallam py-5">
+    <section className="courtallam">
+      
       <div className="container">
 
         <div className="text-center">
 
-          <h2 className="fw-bold">About Courtallam</h2>
+          <h2> About Courtallam </h2>
 
-          <h4 className="text-secondary mb-4">
-            Your Perfect Gateway to Nature
-          </h4>
+          <h4> Your Perfect Gateway to Nature </h4>
 
           <p className="courtallam-text">
             Courtallam, often referred to as the "Spa of South India," is one
@@ -27,10 +24,6 @@ function Courtallam() {
             it the perfect base to explore everything this beautiful destination
             has to offer.
           </p>
-
-          <Link to="/explore" className="btn btn-warning mt-4 px-4 py-2">
-                Explore More
-          </Link>
 
         </div>
 

@@ -8,55 +8,95 @@ import img6 from "../Images/img-15.jpeg";
 import "../Css/Rooms.css";
 
 function ResidencyImages() {
+
+  const images = [
+    {
+      image: img1,
+      title: "Akshaya Residency",
+    },
+    {
+      image: img2,
+      title: "Comfortable Stay",
+    },
+    {
+      image: img3,
+      title: "Relax & Unwind",
+    },
+    {
+      image: img4,
+      title: "Peaceful Surroundings",
+    },
+    {
+      image: img5,
+      title: "Memorable Moments",
+    },
+    {
+      image: img6,
+      title: "Your Stay Awaits",
+    },
+  ];
+
   return (
-    <section className="residency-gallery py-5">
+    <section className="residency-gallery">
 
       <div className="container">
 
-        <div className="text-center mb-5">
-          <h2 className="fw-bold">Residency Images</h2>
-          <p className="text-muted">
-            Explore the beautiful surroundings and comfortable spaces of Akshaya Residency.
+        {/* Gallery Heading */}
+        <div className="gallery-heading">
+
+          <span className="gallery-subtitle">
+            A Glimpse Of Your Stay
+          </span>
+
+          <h2>
+            Residency <span>Gallery</span>
+          </h2>
+
+          <p>
+            Explore the comfortable spaces and peaceful surroundings
+            that make Akshaya Residency a relaxing place to stay.
           </p>
+
+          <div className="gallery-heading-line"></div>
+
         </div>
 
-        <div className="row">
 
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="gallery-card">
-              <img src={img1} alt="" className="gallery-img" />
-            </div>
-          </div>
+        {/* Gallery */}
+        <div className="residency-grid">
 
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="gallery-card">
-              <img src={img2} alt="" className="gallery-img" />
-            </div>
-          </div>
+          {images.map((item, index) => (
 
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="gallery-card">
-              <img src={img3} alt="" className="gallery-img" />
-            </div>
-          </div>
+            <div
+              className={`gallery-card gallery-card-${index + 1}`}
+              key={index}
+            >
 
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="gallery-card">
-              <img src={img4} alt="" className="gallery-img" />
-            </div>
-          </div>
+              <img
+                src={item.image}
+                alt={item.title}
+                className="gallery-img"
+              />
 
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="gallery-card">
-              <img src={img5} alt="" className="gallery-img" />
-            </div>
-          </div>
+              <div className="gallery-overlay">
 
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="gallery-card">
-              <img src={img6} alt="" className="gallery-img" />
+                <div className="gallery-content">
+
+                  <span>
+                    0{index + 1}
+                  </span>
+
+                  <h3>
+                    {item.title}
+                  </h3>
+
+                </div>
+
+              </div>
+
             </div>
-          </div>
+
+          ))}
 
         </div>
 

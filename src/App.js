@@ -5,10 +5,12 @@ import Contact from "./Pages/Contact";
 import About from "./Pages/About";
 import Rooms from "./Pages/Rooms";
 import Explore from "./Pages/Explore";
+import ToursTravels from "./Pages/ToursTravels";
 import ScrollToTop from "./Components/ScrollToTop";
 import Booking from "./Pages/Booking"; 
 import AdminLogin from "./Admin/AdminLogin";
 import AdminDashboard from "./Admin/AdminDashboard";
+
 
 // 
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/rooms" element={<Rooms />} />
+        <Route path="/tours-travels" element={<ToursTravels />}/>
         <Route path="/explore" element={<Explore />} />
         <Route path="/booking" element={<Booking />}/>
         <Route path="/admin/login" element={<AdminLogin />}/>

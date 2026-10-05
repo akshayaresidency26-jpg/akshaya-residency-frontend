@@ -6,15 +6,6 @@ function Welcome() {
       <div className="container">
         <div className="row align-items-center">
 
-          {/* Left Side Image */}
-          {/* <div className="col-lg-6 mb-4 mb-lg-0" image-box>
-            <img
-              src={hotelImage}
-              alt="Akshaya Residency"
-              className="img-fluid rounded shadow welcome-img"
-            />
-          </div> */}
-
           <div className=" col-lg-6 mb-4 mb-lg-0 image-box">
             <img src={hotelImage} className="welcome-img" alt="Hotel" />
           </div>
@@ -58,10 +49,6 @@ function Welcome() {
                 ✅ 24×7 Reception
               </div>
             </div>
-
-            {/* <button className="btn btn-warning px-4 py-2 mt-2">
-              Discover More
-            </button> */}
 
           </div>
 

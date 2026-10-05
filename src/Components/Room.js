@@ -2,7 +2,6 @@ import room1 from "../Images/img-5.jpeg";
 import room2 from "../Images/img-9.jpeg";
 import { Link } from "react-router-dom";
 import "../Css/Rooms.css";
-// import ResidencyImages from "../Components/ResidencyImages";
 
 function Rooms() {
   return (

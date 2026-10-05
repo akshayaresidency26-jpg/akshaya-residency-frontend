@@ -1,47 +1,20 @@
-import React, {
-  useState,
-} from "react";
-
-import {
-  useNavigate,
-} from "react-router-dom";
-
+import React, { useState,} from "react";
+import { useNavigate,} from "react-router-dom";
 import "./Admin.css";
 
-
-const API_URL =
-  "https://akshaya-residency-backend-1.onrender.com";
-
+const API_URL = "https://akshaya-residency-backend-1.onrender.com";
 
 function AdminLogin() {
 
-  const navigate =
-    useNavigate();
+  const navigate = useNavigate();
 
+  const [ email, setEmail,] = useState("");
 
-  const [
-    email,
-    setEmail,
-  ] = useState("");
+  const [ password, setPassword,] = useState("");
 
+  const [ loading, setLoading,] = useState(false);
 
-  const [
-    password,
-    setPassword,
-  ] = useState("");
-
-
-  const [
-    loading,
-    setLoading,
-  ] = useState(false);
-
-
-  const [
-    error,
-    setError,
-  ] = useState("");
-
+  const [ error, setError,] = useState("");
 
   const handleLogin = async (e) => {
 
@@ -50,7 +23,6 @@ function AdminLogin() {
     setError("");
 
     setLoading(true);
-
 
     try {
 
@@ -72,10 +44,7 @@ function AdminLogin() {
           }
         );
 
-
-      const data =
-        await response.json();
-
+      const data = await response.json();
 
       if (!response.ok) {
         throw new Error(
@@ -84,12 +53,10 @@ function AdminLogin() {
         );
       }
 
-
       localStorage.setItem(
         "adminToken",
         data.token
       );
-
 
       navigate(
         "/admin/dashboard"
@@ -108,7 +75,6 @@ function AdminLogin() {
     }
   };
 
-
   return (
 
     <div className="admin-login-page">
@@ -119,15 +85,11 @@ function AdminLogin() {
           AR
         </div>
 
-
-        <h1>
-          Akshaya Residency
-        </h1>
+        <h1> Akshaya Residency </h1>
 
         <p className="admin-subtitle">
           Administration Portal
         </p>
-
 
         {error && (
 
@@ -137,14 +99,9 @@ function AdminLogin() {
 
         )}
 
+        <form onSubmit={handleLogin} >
 
-        <form
-          onSubmit={handleLogin}
-        >
-
-          <label>
-            Admin Email
-          </label>
+          <label> Admin Email </label>
 
           <input
             type="email"
@@ -158,10 +115,7 @@ function AdminLogin() {
             required
           />
 
-
-          <label>
-            Password
-          </label>
+          <label> Password </label>
 
           <input
             type="password"
@@ -174,7 +128,6 @@ function AdminLogin() {
             placeholder="Password"
             required
           />
-
 
           <button
             type="submit"
@@ -195,6 +148,5 @@ function AdminLogin() {
     </div>
   );
 }
-
 
 export default AdminLogin;

@@ -4,20 +4,58 @@ import oldFalls from "../Images/Tenkasi-Kasi vishwanathar temple.jpg";
 import tigerFalls from "../Images/coutrallam-shenbahadevi falls.avif";
 import shenbagadevi from "../Images/coutrallm-tiger-falls.webp";
 import chitraruvi from "../Images/Tenkasi-Thirumali kovil.jpg";
+import "../Css/Explore.css";
 
 function Places() {
   return (
-    <section className="places py-5">
-      <div className="container">
+    <section className="places">
+
+      {/* Page Header */}
+      <div className="places-header">
+        <div className="container">
+
+          <span className="places-subtitle">
+            Discover the Destination
+          </span>
+
+          <h1>
+            Explore <span>Courtallam</span>
+          </h1>
+
+          <p>
+            Discover breathtaking waterfalls, ancient temples and
+            unforgettable experiences around Courtallam and Tenkasi.
+          </p>
+
+          <div className="places-heading-line"></div>
+
+        </div>
+      </div>
+
+      <div className="container places-container">
 
         {/* Main Falls */}
-        <div className="row align-items-center place-row mb-5">
-          <div className="col-lg-6">
-            <img src={mainFalls} alt="Main Falls" className="place-img" />
+        <div className="place-row">
+          <div className="place-image-wrapper">
+            <span className="place-number">01</span>
+
+            <img
+              src={mainFalls}
+              alt="Main Falls"
+              className="place-img"
+            />
           </div>
 
-          <div className="col-lg-6">
-            <h2>Main Falls, Coutrallam</h2>
+          <div className="place-content">
+
+            <span className="place-location">
+              📍 Courtallam
+            </span>
+
+            <h2>Main Falls, Courtallam</h2>
+
+            <div className="place-line"></div>
+
             <p>
               Courtallam Main Falls, also known as Kutralam Main Falls, is one of the most famous 
               and beautiful waterfalls in Tamil Nadu, located in the Tenkasi district at the 
@@ -37,17 +75,37 @@ function Places() {
               waterfalls, including Five Falls, Old Courtallam Falls, Tiger Falls, and Shenbaga Devi 
               Falls, each offering a unique and memorable experience.
             </p>
+
+            <span className="place-discover">
+              Explore Attraction <span>→</span>
+            </span>
+
           </div>
         </div>
 
+
         {/* Five Falls */}
-        <div className="row align-items-center place-row mb-5">
-          <div className="col-lg-6">
-            <img src={fiveFalls} alt="Five Falls" className="place-img" />
+        <div className="place-row reverse">
+          <div className="place-image-wrapper">
+            <span className="place-number">02</span>
+
+            <img
+              src={fiveFalls}
+              alt="Five Falls"
+              className="place-img"
+            />
           </div>
 
-          <div className="col-lg-6">
-            <h2>Five Falls, Coutrallam</h2>
+          <div className="place-content">
+
+            <span className="place-location">
+              📍 Courtallam
+            </span>
+
+            <h2>Five Falls, Courtallam</h2>
+
+            <div className="place-line"></div>
+
             <p>
               Five Falls, locally known as Aintharuvi, is one of the most popular and picturesque 
               waterfalls in Courtallam, located in the Tenkasi district of Tamil Nadu at the 
@@ -63,19 +121,39 @@ function Places() {
               waterfall is at its fullest and the surrounding landscape is vibrant and green. The 
               bathing area is well maintained, with separate sections for men and women to ensure 
               safety and comfort. Nearby, visitors can find small shops selling herbal oils, local 
-              snacks, fresh fruits, and souvenirs, adding to the overall experience. 
+              snacks, fresh fruits, and souvenirs, adding to the overall experience.
             </p>
+
+            <span className="place-discover">
+              Explore Attraction <span>→</span>
+            </span>
+
           </div>
         </div>
 
-        {/* Old Courtallam */}
-        <div className="row align-items-center place-row mb-5">
-          <div className="col-lg-6">
-            <img src={oldFalls} alt="Old Courtallam" className="place-img" />
+
+        {/* Kasi Viswanathar Temple */}
+        <div className="place-row">
+          <div className="place-image-wrapper">
+            <span className="place-number">03</span>
+
+            <img
+              src={oldFalls}
+              alt="Kasi Viswanathar Temple"
+              className="place-img"
+            />
           </div>
 
-          <div className="col-lg-6">
+          <div className="place-content">
+
+            <span className="place-location">
+              📍 Tenkasi
+            </span>
+
             <h2>Kasi Viswanathar Temple, Tenkasi</h2>
+
+            <div className="place-line"></div>
+
             <p>
               The Kasi Viswanathar Temple is one of the most famous and ancient Hindu temples in 
               Tamil Nadu, located in the heart of Tenkasi. Dedicated to Lord Shiva, who is worshipped 
@@ -96,17 +174,37 @@ function Places() {
               Thiruvathirai are celebrated with great devotion, attracting thousands of pilgrims 
               every year.
             </p>
+
+            <span className="place-discover">
+              Explore Attraction <span>→</span>
+            </span>
+
           </div>
         </div>
 
-        {/* Tiger Falls */}
-        <div className="row align-items-center place-row mb-5">
-          <div className="col-lg-6">
-            <img src={tigerFalls} alt="Tiger Falls" className="place-img" />
+
+        {/* Shenbaga Devi Falls */}
+        <div className="place-row reverse">
+          <div className="place-image-wrapper">
+            <span className="place-number">04</span>
+
+            <img
+              src={tigerFalls}
+              alt="Shenbaga Devi Falls"
+              className="place-img"
+            />
           </div>
 
-          <div className="col-lg-6">
-            <h2>Shenbagadevi Falls</h2>
+          <div className="place-content">
+
+            <span className="place-location">
+              📍 Courtallam
+            </span>
+
+            <h2>Shenbaga Devi Falls</h2>
+
+            <div className="place-line"></div>
+
             <p>
               Shenbaga Devi Falls is a beautiful and scenic waterfall located deep within the forests 
               of the Western Ghats near Courtallam. Named after Goddess Shenbaga Devi, whose temple is
@@ -124,17 +222,37 @@ function Places() {
               importance, and adventure, Shenbaga Devi Falls offers visitors a memorable experience 
               and remains one of the must-visit attractions near Courtallam.
             </p>
+
+            <span className="place-discover">
+              Explore Attraction <span>→</span>
+            </span>
+
           </div>
         </div>
 
-        {/* Shenbagadevi */}
-        <div className="row align-items-center place-row mb-5">
-          <div className="col-lg-6">
-            <img src={shenbagadevi} alt="Shenbagadevi Falls" className="place-img" />
+
+        {/* Tiger Falls */}
+        <div className="place-row">
+          <div className="place-image-wrapper">
+            <span className="place-number">05</span>
+
+            <img
+              src={shenbagadevi}
+              alt="Tiger Falls"
+              className="place-img"
+            />
           </div>
 
-          <div className="col-lg-6">
+          <div className="place-content">
+
+            <span className="place-location">
+              📍 Courtallam
+            </span>
+
             <h2>Tiger Falls</h2>
+
+            <div className="place-line"></div>
+
             <p>
               Tiger Falls, locally known as Puliyaruvi, is one of the most peaceful and 
               family-friendly waterfalls in Courtallam, located in the Tenkasi district of Tamil Nadu.
@@ -151,17 +269,37 @@ function Places() {
               at its greenest. The peaceful ambience, easy accessibility, and natural beauty make 
               Tiger Falls one of the most popular attractions for tourists visiting Courtallam.
             </p>
+
+            <span className="place-discover">
+              Explore Attraction <span>→</span>
+            </span>
+
           </div>
         </div>
 
-        {/* Chitraruvi */}
-        <div className="row align-items-center place-row">
-          <div className="col-lg-6">
-            <img src={chitraruvi} alt="Chitraruvi" className="place-img" />
+
+        {/* Thirumalai Kumaraswamy Temple */}
+        <div className="place-row reverse">
+          <div className="place-image-wrapper">
+            <span className="place-number">06</span>
+
+            <img
+              src={chitraruvi}
+              alt="Thirumalai Kumaraswamy Temple"
+              className="place-img"
+            />
           </div>
 
-          <div className="col-lg-6">
+          <div className="place-content">
+
+            <span className="place-location">
+              📍 Tenkasi
+            </span>
+
             <h2>Thirumalai Kumaraswamy Temple</h2>
+
+            <div className="place-line"></div>
+
             <p>
               The Thirumalai Murugan Temple, also known as Thirumalai Kumaraswamy Temple, is a 
               famous hill temple dedicated to Lord Murugan, located at Panpozhi near Tenkasi, about 
@@ -176,6 +314,11 @@ function Places() {
               or by using the hill road that leads directly to the temple complex. The hill itself is 
               considered sacred, and many devotees undertake the climb as an act of devotion.
             </p>
+
+            <span className="place-discover">
+              Explore Attraction <span>→</span>
+            </span>
+
           </div>
         </div>
 

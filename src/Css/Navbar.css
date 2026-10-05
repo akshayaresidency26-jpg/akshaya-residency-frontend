@@ -1,0 +1,565 @@
+.akshaya-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  min-height: 62px;
+  background:
+    linear-gradient(
+      90deg,
+      #2d1c10 0%,
+      #3a2415 50%,
+      #2b1a0e 100%
+    );
+  border-bottom: 1px solid rgba(218, 176, 111, 0.18);
+  box-shadow: 0 8px 25px rgba(30, 18, 9, 0.20);
+  transition: all 0.3s ease;
+}
+
+.akshaya-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 0;
+  min-width: 0;
+}
+
+.akshaya-logo 
+{
+  position: relative;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #f1d19b;
+  border-radius: 50%;
+  background: rgba(241, 209, 155, 0.06);
+  overflow: hidden;
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.16),
+    inset 0 0 10px rgba(241, 209, 155, 0.04);
+  transition: all 0.25s ease;
+}
+
+/* Elegant roof */
+
+.logo-roof {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  top: 7px;
+  left: 8px;
+  border-top: 1.5px solid #f1d19b;
+  border-left: 1.5px solid #f1d19b;
+  transform: rotate(45deg);
+}
+
+/* A */
+
+.logo-letter 
+{
+  position: relative;
+  z-index: 2;
+  margin-top: 5px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #f1d19b;
+}
+
+   /* Akashaya residency text */
+
+.akshaya-brand-name 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* Akshaya */
+
+.brand-main {
+  font-family:
+    "Nexa Script",
+    "Brush Script MT",
+    cursive;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 0.9;
+  color: #f1d19b;
+  white-space: nowrap;
+}
+
+/* Residency */
+
+.brand-sub 
+{
+  margin-top: 5px;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.72);
+  white-space: nowrap;
+}
+
+.akshaya-brand:hover {
+  text-decoration: none;
+}
+
+.akshaya-brand:hover .akshaya-logo 
+{
+  transform: translateY(-1px);
+  border-color: #f6dcae;
+  box-shadow:
+    0 5px 16px rgba(0, 0, 0, 0.22),
+    0 0 12px rgba(241, 209, 155, 0.08);
+}
+
+.akshaya-brand:hover .brand-main {
+  color: #f6dcae;
+}
+
+   /* Tablet */
+
+@media (max-width: 991px) {
+
+  .akshaya-logo {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  .brand-main {
+    font-size: 25px;
+  }
+
+  .brand-sub {
+    font-size: 6.5px;
+    letter-spacing: 2.7px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+  .akshaya-brand {
+    gap: 7px;
+  }
+
+  .akshaya-logo {
+    width: 33px;
+    height: 33px;
+    flex-basis: 33px;
+  }
+
+  .logo-letter {
+    font-size: 21px;
+    margin-top: 4px;
+  }
+
+  .logo-roof {
+    width: 17px;
+    height: 8px;
+    top: 6px;
+    left: 7px;
+  }
+
+  .brand-main {
+    font-size: 23px;
+  }
+
+  .brand-sub {
+    margin-top: 4px;
+    font-size: 6px;
+    letter-spacing: 2.3px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 400px) {
+
+  .akshaya-brand {
+    gap: 6px;
+  }
+
+  .akshaya-logo {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+
+  .logo-letter {
+    font-size: 19px;
+  }
+
+  .logo-roof {
+    width: 15px;
+    height: 7px;
+    top: 6px;
+    left: 6px;
+  }
+
+  .brand-main {
+    font-size: 21px;
+  }
+
+  .brand-sub {
+    font-size: 5.5px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Very small devices */
+
+@media (max-width: 330px) {
+
+  .akshaya-logo {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+
+  .logo-letter {
+    font-size: 18px;
+  }
+
+  .brand-main {
+    font-size: 19px;
+  }
+
+  .brand-sub {
+    font-size: 5px;
+    letter-spacing: 1.7px;
+  }
+}
+
+/* Nav links */
+
+.akshaya-nav-link {
+  position: relative;
+  margin: 0 7px;
+  padding: 28px 10px !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Underline */
+
+.akshaya-nav-link::after 
+{
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 19px;
+  height: 2px;
+  background: #d6a968;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.akshaya-nav-link:hover {
+  color: #f0ce98 !important;
+  transform: translateY(-1px);
+}
+
+
+.akshaya-nav-link:hover::after,
+.akshaya-nav-link.active::after {
+  transform: scaleX(1);
+}
+
+
+.akshaya-nav-link.active {
+  color: #f1d19b !important;
+  font-weight: 600;
+}
+
+/* Book now button */
+
+.booking-nav-item 
+{
+  margin-left: 12px;
+}
+
+
+.navbar-book-btn 
+{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 145px;
+  padding: 10px 10px 10px 20px;
+  color: #3a2415;
+  background: linear-gradient(
+    135deg,
+    #e8c27f,
+    #c99450
+  );
+  border: 1px solid rgba(255, 226, 172, 0.55);
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.20);
+  transition: all 0.35s ease;
+}
+
+
+.navbar-book-arrow 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #754a28;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+
+.navbar-book-btn:hover 
+{
+  color: #3a2415;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.28);
+  background: linear-gradient(
+    135deg,
+    #f0cf91,
+    #d6a968
+  );
+}
+
+.navbar-book-btn:hover .navbar-book-arrow {
+  background: #ffffff;
+  transform: translateX(4px);
+}
+
+/* Mobile toggler */
+
+.akshaya-toggler {
+  width: 45px;
+  height: 42px;
+  padding: 8px;
+  border: 1px solid rgba(226, 190, 132, 0.35) !important;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: none !important;
+}
+
+
+.akshaya-toggler:focus 
+{
+  box-shadow:
+    0 0 0 3px rgba(214, 169, 104, 0.15) !important;
+}
+
+
+.akshaya-toggler span 
+{
+  display: block;
+  width: 23px;
+  height: 2px;
+  margin: 5px auto;
+  background: #e6c084;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+
+.akshaya-toggler:hover 
+{
+  background: rgba(214, 169, 104, 0.10);
+}
+
+/* Tablet */
+
+@media (max-width: 1199px) {
+
+  .akshaya-brand {
+    margin-right: 15px;
+  }
+
+  .akshaya-nav-link {
+    margin: 0 3px;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+    font-size: 12px;
+  }
+
+  .akshaya-nav-link::after {
+    left: 7px;
+    right: 7px;
+  }
+
+  .booking-nav-item {
+    margin-left: 7px;
+  }
+
+  .navbar-book-btn {
+    min-width: 132px;
+    padding-left: 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .akshaya-navbar {
+    min-height: 70px;
+  }
+
+  .akshaya-brand {
+    margin-right: 0;
+  }
+
+  .brand-main {
+    font-size: 22px;
+  }
+
+  .akshaya-navbar .navbar-collapse 
+  {
+    margin-top: 15px;
+    padding: 10px 0 18px;
+    border-top: 1px solid rgba(218, 176, 111, 0.15);
+  }
+
+
+  .akshaya-navbar .navbar-nav {
+    align-items: stretch !important;
+  }
+
+
+  .akshaya-nav-link 
+  {
+    margin: 0;
+    padding: 13px 8px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  }
+
+
+  .akshaya-nav-link::after {
+    left: 0;
+    right: auto;
+    bottom: 0;
+    width: 40px;
+  }
+
+
+  .akshaya-nav-link:hover {
+    transform: translateX(4px);
+  }
+
+
+  .booking-nav-item {
+    margin: 18px 0 0;
+  }
+
+
+  .navbar-book-btn {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px 11px 20px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+  .akshaya-navbar {
+    min-height: 66px;
+  }
+
+  .akshaya-navbar .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .brand-main {
+    font-size: 20px;
+  }
+
+  .brand-sub {
+    margin-top: 4px;
+    font-size: 8px;
+    letter-spacing: 2.4px;
+  }
+
+  .akshaya-toggler {
+    width: 42px;
+    height: 40px;
+  }
+
+  .akshaya-navbar .navbar-collapse {
+    margin-top: 12px;
+    padding-bottom: 14px;
+  }
+
+  .akshaya-nav-link {
+    font-size: 13px;
+    padding: 12px 5px !important;
+  }
+
+  .booking-nav-item {
+    margin-top: 16px;
+  }
+
+  .navbar-book-btn {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .akshaya-navbar .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .brand-main {
+    font-size: 18px;
+  }
+
+  .brand-sub {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .akshaya-toggler {
+    width: 40px;
+    height: 38px;
+  }
+
+  .akshaya-toggler span {
+    width: 20px;
+  }
+}

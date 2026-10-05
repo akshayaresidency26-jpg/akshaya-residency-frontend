@@ -1,31 +1,11 @@
-import footerBg from "../Images/img-8.jpeg";
+// import footerBg from "../Images/img-8.jpeg";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "../Css/Footer.css";
 
 function Footer() {
   return (
     <>
-      {/* CTA Section */}
-      <section
-        className="footer-banner text-white text-center mt-5 mb-1"
-        style={{
-          backgroundImage: `url(${footerBg})`,
-        }}
-      >
-        <div className="overlay">
-          <div className="container">
-
-            <h2>Ready to Make Memories?</h2>
-
-            <h1>Your Perfect Stay Awaits at Akshaya Residency!</h1>
-
-            <Link to="/booking" className="btn btn-danger btn-lg mt-3">
-                Book Now
-            </Link>
-
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="footer-section">
@@ -50,11 +30,6 @@ function Footer() {
             <div className="col-lg-3 col-md-6 mb-4">
 
               <h3>Contact Details</h3>
-{/* 
-              <p>
-                <FaMapMarkerAlt className="me-2 text-danger" />
-                <strong>Akshaya Residency</strong>
-              </p> */}
 
               <p>
                 <FaMapMarkerAlt className="me-2 text-danger" />
@@ -78,6 +53,7 @@ function Footer() {
             </div>
 
             {/* Quick Links */}
+
             <div className="col-lg-3 col-md-6 mb-4">
 
               <h3>Quick Links</h3>
@@ -96,18 +72,16 @@ function Footer() {
                   About
                 </Link></li>
 
-                {/* <li>Facilities</li> */}
-
-                {/* <li>Nearby Attractions</li> */}
-                {/* <Link to="/explore" className="footer-link">
-                      Nearby Attractions
-                </Link> */}
                 <li><Link to="/explore" onClick={() => window.scrollTo(0, 0)} className="footer-link">
                   Nearby Attractions
                 </Link></li>
 
                 <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="footer-link">
                   Contact
+                </Link></li>
+
+                <li><Link to="/tours-travels" onClick={() => window.scrollTo(0, 0)} className="footer-link">
+                  Tours and Travels
                 </Link></li>
 
               </ul>
@@ -127,7 +101,15 @@ function Footer() {
 
                 <li>Instagram</li>
 
-                <li>Twitter</li>
+                <li className="admin-login-footer">
+                  <Link
+                    to="/admin/login"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="admin-login-link"
+                  >
+                    Admin Login
+                  </Link>
+                </li>
 
               </ul>
 

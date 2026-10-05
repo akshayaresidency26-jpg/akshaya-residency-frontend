@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../Css/About.css"
 
 function AboutUs() {
@@ -9,9 +8,7 @@ function AboutUs() {
 
         <div className="text-center">
 
-          <h2 className="fw-bold">
-            About Us
-          </h2>
+          <h2 className="fw-bold"> About Us </h2>
 
           <h4 className="text-secondary mb-4">
             Experience Comfort, Hospitality & Nature
@@ -44,10 +41,6 @@ function AboutUs() {
           <blockquote className="about-quote mt-5">
             "Where every stay begins with comfort and ends with unforgettable memories."
           </blockquote>
-
-          <Link to="/explore" className="btn btn-warning mt-4 px-4 py-2">
-                Explore More
-          </Link>
 
         </div>
 

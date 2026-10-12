@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+import img5 from "../Images/img-5.jpeg";
+import img9 from "../Images/img-9.jpeg";
+
 function RoomCards() {
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -27,16 +30,24 @@ function RoomCards() {
     loadRooms();
   }, []);
 
-  const getRoomImage = (image) => {
-    if (image === "img-12.jpeg") {
-      return require("../Images/img-12.jpeg");
+  // ---------------------------------------
+  // ROOM IMAGE MAPPING
+  // Non-AC Cottage -> img-5.jpeg
+  // AC Cottage     -> img-9.jpeg
+  // ---------------------------------------
+  const getRoomImage = (room) => {
+    const roomName = room.name?.toLowerCase().trim();
+
+    if (roomName === "non-ac cottage") {
+      return img5;
     }
 
-    if (image === "img-11.jpeg") {
-      return require("../Images/img-11.jpeg");
+    if (roomName === "ac cottage") {
+      return img9;
     }
 
-    return require("../Images/img-5.jpeg");
+    // Fallback
+    return img5;
   };
 
   if (loading) {
@@ -54,7 +65,6 @@ function RoomCards() {
 
   return (
     <section className="rooms-section">
-
       <div className="container">
 
         {/* Section Heading */}
@@ -77,13 +87,15 @@ function RoomCards() {
 
         </div>
 
-
         {/* Room Cards */}
         <div className="rooms-list">
 
           {rooms.map((room, index) => (
 
-            <div className="premium-room-card" key={room._id}>
+            <div
+              className="premium-room-card"
+              key={room._id}
+            >
 
               <div className="room-image-wrapper">
 
@@ -92,7 +104,7 @@ function RoomCards() {
                 </span>
 
                 <img
-                  src={getRoomImage(room.image)}
+                  src={getRoomImage(room)}
                   alt={room.name}
                   className="room-image"
                 />
@@ -100,7 +112,6 @@ function RoomCards() {
                 <div className="room-image-overlay"></div>
 
               </div>
-
 
               <div className="room-details">
 
@@ -116,33 +127,41 @@ function RoomCards() {
                   {room.description}
                 </p>
 
-
                 <div className="room-info">
 
                   <div className="room-info-item">
-                    <span className="room-info-icon">🛏</span>
+
+                    <span className="room-info-icon">
+                      🛏
+                    </span>
 
                     <div>
                       <small>Bedrooms</small>
-                      <strong>{room.bedrooms}</strong>
-                    </div>
-                  </div>
 
+                      <strong>
+                        {room.bedrooms}
+                      </strong>
+                    </div>
+
+                  </div>
 
                   <div className="room-price">
 
-                    <small>Starting from</small>
+                    <small>
+                      Starting from
+                    </small>
 
                     <strong>
                       ₹{room.price}
                     </strong>
 
-                    <span>/ night</span>
+                    <span>
+                      / night
+                    </span>
 
                   </div>
 
                 </div>
-
 
                 <div className="room-bottom">
 
@@ -161,7 +180,6 @@ function RoomCards() {
         </div>
 
       </div>
-
     </section>
   );
 }

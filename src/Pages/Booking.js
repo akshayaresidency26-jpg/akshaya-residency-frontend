@@ -18,12 +18,11 @@ function Booking() {
     checkOut: "",
     specialRequest: "",
   });
-  const [idProof, setIdProof] = useState(null);
+
   const [availability, setAvailability] = useState(null);
   const [message, setMessage] = useState("");
 
   // Load rooms
-
   useEffect(() => {
     fetch(`${API_URL}/api/rooms`)
       .then((response) => {
@@ -54,7 +53,6 @@ function Booking() {
   }, []);
 
   // Handle input change
-
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -71,48 +69,7 @@ function Booking() {
     }
   };
 
-   // Handle Id proof
-
-  const handleIdProofChange = (e) => {
-    const file = e.target.files[0];
-
-    if (!file) {
-      setIdProof(null);
-      return;
-    }
-
-    const maxSize = 5 * 1024 * 1024;
-
-    if (file.size > maxSize) {
-      setMessage("ID proof file must be 5 MB or smaller.");
-
-      e.target.value = "";
-      setIdProof(null);
-      return;
-    }
-
-    const allowedTypes = [
-      "image/jpeg",
-      "image/png",
-      "application/pdf",
-    ];
-
-    if (!allowedTypes.includes(file.type)) {
-      setMessage(
-        "Please upload a JPG, JPEG, PNG, or PDF file."
-      );
-
-      e.target.value = "";
-      setIdProof(null);
-      return;
-    }
-
-    setIdProof(file);
-    setMessage("");
-  };
-
   // Check Availability
-
   const checkAvailability = async () => {
     if (!form.roomId || !form.checkIn || !form.checkOut) {
       setMessage("Please select room and dates.");
@@ -120,9 +77,7 @@ function Booking() {
     }
 
     if (form.checkOut <= form.checkIn) {
-      setMessage(
-        "Check-out date must be after check-in date."
-      );
+      setMessage("Check-out date must be after check-in date.");
       return;
     }
 
@@ -133,24 +88,16 @@ function Booking() {
         `${API_URL}/api/bookings/availability?roomId=${form.roomId}&checkIn=${form.checkIn}&checkOut=${form.checkOut}`
       );
 
-      console.log(
-        "AVAILABILITY STATUS:",
-        response.status
-      );
+      console.log("AVAILABILITY STATUS:", response.status);
 
       const data = await response.json();
 
-      console.log(
-        "AVAILABILITY DATA:",
-        data
-      );
+      console.log("AVAILABILITY DATA:", data);
 
       if (!response.ok) {
         setMessage(
-          data.message ||
-            "Unable to check availability."
+          data.message || "Unable to check availability."
         );
-
         return;
       }
 
@@ -161,30 +108,19 @@ function Booking() {
           `Room is available. ${data.remainingRooms} room(s) remaining.`
         );
       } else {
-        setMessage(
-          "Room is not available for these dates."
-        );
+        setMessage("Room is not available for these dates.");
       }
     } catch (error) {
-      console.error(
-        "AVAILABILITY ERROR:",
-        error
-      );
-
-      setMessage(
-        "Unable to check availability."
-      );
+      console.error("AVAILABILITY ERROR:", error);
+      setMessage("Unable to check availability.");
     }
   };
 
   // Submit booking
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(
-      "========== BOOKING START =========="
-    );
+    console.log("========== BOOKING START ==========");
 
     if (!form.roomId) {
       setMessage("Please select a room.");
@@ -192,144 +128,67 @@ function Booking() {
     }
 
     if (!form.checkIn || !form.checkOut) {
-      setMessage(
-        "Please select check-in and check-out dates."
-      );
+      setMessage("Please select check-in and check-out dates.");
       return;
     }
 
     if (form.checkOut <= form.checkIn) {
-      setMessage(
-        "Check-out date must be after check-in date."
-      );
+      setMessage("Check-out date must be after check-in date.");
       return;
     }
 
     if (!availability?.available) {
-      setMessage(
-        "Please check availability first."
-      );
-      return;
-    }
-
-    if (!idProof) {
-      setMessage(
-        "Please upload a valid ID proof."
-      );
+      setMessage("Please check availability first.");
       return;
     }
 
     const selectedRoom = rooms.find(
-      (room) =>
-        room._id === form.roomId
+      (room) => room._id === form.roomId
     );
 
     if (!selectedRoom) {
-      setMessage(
-        "Selected room could not be found."
-      );
+      setMessage("Selected room could not be found.");
       return;
     }
 
-    const formData = new FormData();
+    // Send booking details without ID-proof upload.
+    // FormData is retained for compatibility with the existing backend.
+    const bookingData = {
+      roomId: form.roomId,
+      name: form.guestName,
+      email: form.email,
+      phone: form.phone,
+      roomType:
+        selectedRoom.name || selectedRoom.roomType || "",
+      checkIn: form.checkIn,
+      checkOut: form.checkOut,
+      guests: Number(form.guests),
+      message: form.specialRequest || "",
+    };
 
-    formData.append(
-      "roomId",
-      form.roomId
-    );
+    console.log("BOOKING FORM DATA READY");
 
-    formData.append(
-      "name",
-      form.guestName
-    );
-
-    formData.append(
-      "email",
-      form.email
-    );
-
-    formData.append(
-      "phone",
-      form.phone
-    );
-
-    formData.append(
-      "roomType",
-      selectedRoom.name ||
-        selectedRoom.roomType ||
-        ""
-    );
-
-    formData.append(
-      "checkIn",
-      form.checkIn
-    );
-
-    formData.append(
-      "checkOut",
-      form.checkOut
-    );
-
-    formData.append(
-      "guests",
-      Number(form.guests)
-    );
-
-    formData.append(
-      "message",
-      form.specialRequest || ""
-    );
-
-    formData.append(
-      "idProof",
-      idProof
-    );
-
-    console.log(
-      "BOOKING FORM DATA READY"
-    );
-
-    console.log(
-      "ID PROOF:",
-      idProof.name
-    );
-
-    setMessage(
-      "Booking is being submitted..."
-    );
+    setMessage("Booking is being submitted...");
 
     try {
-      console.log(
-        "SENDING BOOKING TO:",
-        `${API_URL}/api/bookings`
-      );
+      console.log("SENDING BOOKING TO:", `${API_URL}/api/bookings`);
 
-      const response = await fetch(
-        `${API_URL}/api/bookings`,
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch(`${API_URL}/api/bookings`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(bookingData),
+      });
 
-      console.log(
-        "BOOKING STATUS:",
-        response.status
-      );
+      console.log("BOOKING STATUS:", response.status);
 
       const data = await response.json();
 
-      console.log(
-        "BOOKING RESPONSE:",
-        data
-      );
+      console.log("BOOKING RESPONSE:", data);
 
       if (!response.ok) {
-        setMessage(
-          data.message ||
-            "Booking failed."
-        );
-
+        setMessage(data.message || "Booking failed.");
         return;
       }
 
@@ -342,14 +201,10 @@ function Booking() {
         `Booking successful! Your Booking ID is ${bookingId}. Payment instructions have been sent to your email.`
       );
 
-      console.log(
-        "BOOKING SUCCESS:",
-        bookingId
-      );
+      console.log("BOOKING SUCCESS:", bookingId);
 
       setForm({
-        roomId:
-          rooms[0]?._id || "",
+        roomId: rooms[0]?._id || "",
         guestName: "",
         email: "",
         phone: "",
@@ -359,26 +214,11 @@ function Booking() {
         specialRequest: "",
       });
 
-      setIdProof(null);
       setAvailability(null);
 
-      const fileInput =
-        document.getElementById(
-          "idProof"
-        );
-
-      if (fileInput) {
-        fileInput.value = "";
-      }
-
-      console.log(
-        "========== BOOKING SUCCESS =========="
-      );
+      console.log("========== BOOKING SUCCESS ==========");
     } catch (error) {
-      console.error(
-        "BOOKING ERROR:",
-        error
-      );
+      console.error("BOOKING ERROR:", error);
 
       setMessage(
         "Unable to submit booking. Please try again."
@@ -386,20 +226,16 @@ function Booking() {
     }
   };
 
-
   return (
     <>
       <Navbar />
 
       <main className="booking-page">
-
         <section className="booking-hero">
-
           <div className="booking-hero-overlay"></div>
 
           <div className="container">
             <div className="booking-hero-content">
-
               <span>
                 AKSHAYA RESIDENCY · COURTALLAM
               </span>
@@ -414,20 +250,15 @@ function Booking() {
               </p>
 
               <div className="booking-hero-line"></div>
-
             </div>
           </div>
         </section>
 
-            {/* Booking Content */}
-
+        {/* Booking Content */}
         <section className="booking-content">
           <div className="container">
-
             {/* Heading */}
-
             <div className="booking-heading">
-
               <span className="booking-heading-small">
                 RESERVATION
               </span>
@@ -440,15 +271,11 @@ function Booking() {
                 Check room availability and provide
                 your details to complete your reservation.
               </p>
-
             </div>
 
             {/* Booking Box */}
-
             <div className="booking-box">
-
               <div className="booking-date-section">
-
                 <div className="booking-section-number">
                   01
                 </div>
@@ -457,21 +284,16 @@ function Booking() {
                   YOUR RESERVATION
                 </span>
 
-                <h3>
-                  Select Your Dates
-                </h3>
+                <h3>Select Your Dates</h3>
 
                 <p className="booking-section-description">
                   Choose your check-in and check-out
                   dates to see room availability.
                 </p>
 
-
                 <div className="date-grid">
-
                   <div className="booking-field">
-
-                    <label> Check-in </label>
+                    <label>Check-in</label>
 
                     <input
                       type="date"
@@ -480,13 +302,10 @@ function Booking() {
                       onChange={handleChange}
                       required
                     />
-
                   </div>
 
-
                   <div className="booking-field">
-
-                    <label> Check-out </label>
+                    <label>Check-out</label>
 
                     <input
                       type="date"
@@ -495,17 +314,12 @@ function Booking() {
                       onChange={handleChange}
                       required
                     />
-
                   </div>
-
                 </div>
 
-
                 {/* Room */}
-
                 <div className="room-selection">
-
-                  <label> Select Room </label>
+                  <label>Select Room</label>
 
                   <select
                     name="roomId"
@@ -513,7 +327,6 @@ function Booking() {
                     onChange={handleChange}
                     required
                   >
-
                     <option value="">
                       Select a room
                     </option>
@@ -526,29 +339,20 @@ function Booking() {
                         {room.name} - ₹{room.price}
                       </option>
                     ))}
-
                   </select>
-
                 </div>
 
-
-                {/* AVAILABILITY */}
-
+                {/* Availability */}
                 <button
                   type="button"
                   className="availability-btn"
                   onClick={checkAvailability}
                 >
-                  <span>
-                    Check Availability
-                  </span>
-
+                  <span>Check Availability</span>
                   <b>→</b>
                 </button>
 
-
-                {/* RESULT */}
-
+                {/* Availability Result */}
                 {availability && (
                   <div
                     className={
@@ -558,9 +362,7 @@ function Booking() {
                     }
                   >
                     <span>
-                      {availability.available
-                        ? "✓"
-                        : "!"}
+                      {availability.available ? "✓" : "!"}
                     </span>
 
                     <div>
@@ -570,12 +372,9 @@ function Booking() {
                     </div>
                   </div>
                 )}
-
               </div>
 
-
               <div className="booking-form">
-
                 <div className="booking-section-number">
                   02
                 </div>
@@ -584,23 +383,17 @@ function Booking() {
                   YOUR INFORMATION
                 </span>
 
-                <h3>
-                  Guest Details
-                </h3>
+                <h3>Guest Details</h3>
 
                 <p className="booking-section-description">
                   Please provide your details so we
                   can confirm your reservation.
                 </p>
 
-
                 <form onSubmit={handleSubmit}>
-
                   {/* Name */}
-
                   <div className="booking-input-group">
-
-                    <label> Guest Name </label>
+                    <label>Guest Name</label>
 
                     <input
                       type="text"
@@ -610,15 +403,11 @@ function Booking() {
                       onChange={handleChange}
                       required
                     />
-
                   </div>
 
-
                   {/* Email */}
-
                   <div className="booking-input-group">
-
-                    <label> Email Address </label>
+                    <label>Email Address</label>
 
                     <input
                       type="email"
@@ -628,15 +417,11 @@ function Booking() {
                       onChange={handleChange}
                       required
                     />
-
                   </div>
 
-
                   {/* Phone */}
-
                   <div className="booking-input-group">
-
-                    <label> Phone Number </label>
+                    <label>Phone Number</label>
 
                     <input
                       type="tel"
@@ -646,15 +431,11 @@ function Booking() {
                       onChange={handleChange}
                       required
                     />
-
                   </div>
 
-
                   {/* Guests */}
-
                   <div className="booking-input-group">
-
-                    <label> Number of Guests </label>
+                    <label>Number of Guests</label>
 
                     <select
                       name="guests"
@@ -662,70 +443,16 @@ function Booking() {
                       onChange={handleChange}
                       required
                     >
-
-                      <option value="1"> 1  </option>
-
-                      <option value="2"> 2 </option>
-
-                      <option value="3"> 3 </option>
-
-                      <option value="4"> 4  </option>
-
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
                     </select>
-
                   </div>
 
-
-                  {/* Id proof */}
-
-                  <div className="id-proof-field">
-
-                    <label htmlFor="idProof">
-                      Government ID Proof *
-                    </label>
-
-                    <div className="id-upload-box">
-
-                      <input
-                        id="idProof"
-                        type="file"
-                        name="idProof"
-                        accept=".jpg,.jpeg,.png,.pdf"
-                        onChange={handleIdProofChange}
-                        required
-                      />
-
-                      <div className="upload-icon">
-                        ↑
-                      </div>
-
-                      <strong>
-                        Upload ID Proof
-                      </strong>
-
-                      <span>
-                        JPG, PNG or PDF · Maximum 5 MB
-                      </span>
-
-                    </div>
-
-                    <small>
-                      Aadhaar, Driving Licence,
-                      Passport, or Voter ID.
-                    </small>
-
-                    {idProof && (
-                      <div className="selected-file">
-                        ✓ {idProof.name}
-                      </div>
-                    )}
-
-                  </div>
-
-
+                  {/* Special Request */}
                   <div className="booking-input-group">
-
-                    <label> Special Request </label>
+                    <label>Special Request</label>
 
                     <textarea
                       name="specialRequest"
@@ -734,25 +461,16 @@ function Booking() {
                       onChange={handleChange}
                       rows="3"
                     />
-
                   </div>
 
-
                   {/* Submit */}
-
                   <button
                     type="submit"
                     className="book-button"
                   >
-                    <span>
-                      Confirm Booking
-                    </span>
-
-                    <b>
-                      →
-                    </b>
+                    <span>Confirm Booking</span>
+                    <b>→</b>
                   </button>
-
                 </form>
 
                 {message && (
@@ -760,13 +478,10 @@ function Booking() {
                     {message}
                   </div>
                 )}
-
               </div>
-
             </div>
 
             <div className="booking-note">
-
               <span>✦</span>
 
               <p>
@@ -774,12 +489,9 @@ function Booking() {
                 After successful submission, payment
                 instructions will be sent to your email.
               </p>
-
             </div>
-
           </div>
         </section>
-
       </main>
 
       <Footer />

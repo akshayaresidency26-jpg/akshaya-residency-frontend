@@ -103,12 +103,13 @@ function Booking() {
 
       setAvailability(data);
 
-      if (data.available) {
-        setMessage(
-          `Room is available. ${data.remainingRooms} room(s) remaining.`
-        );
+     if (data.available) {
+        setMessage("This cottage is available for your selected dates.");
       } else {
-        setMessage("Room is not available for these dates.");
+        setMessage(
+          data.message ||
+            "No cottage available for these dates. The cottage is occupied."
+        );
       }
     } catch (error) {
       console.error("AVAILABILITY ERROR:", error);
@@ -366,9 +367,10 @@ function Booking() {
                     </span>
 
                     <div>
-                      {availability.available
-                        ? `Available — ${availability.remainingRooms} room(s) remaining`
-                        : "Not available for selected dates"}
+                    {availability.available
+                      ? "This cottage is available for your selected dates."
+                      : availability.message ||
+                        "No cottage available for these dates. The cottage is occupied."}
                     </div>
                   </div>
                 )}

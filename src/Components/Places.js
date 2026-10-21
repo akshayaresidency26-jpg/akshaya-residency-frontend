@@ -1,6 +1,6 @@
 import mainFalls from "../Images/Courtallam - Main falls.jpg";
 import fiveFalls from "../Images/coutrallam-five falls.jpg";
-import oldFalls from "../Images/Tenkasi-Kasi vishwanathar temple.jpg";
+import oldFalls from "../Images/Kasi Vishwanathar Temple.jpeg";
 import tigerFalls from "../Images/coutrallam-shenbahadevi falls.avif";
 import shenbagadevi from "../Images/coutrallm-tiger-falls.webp";
 import chitraruvi from "../Images/Tenkasi-Thirumali kovil.jpg";

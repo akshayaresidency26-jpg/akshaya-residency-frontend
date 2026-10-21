@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import img1 from "../Images/coutrallam-five falls.jpg";
-import img2 from "../Images/Tenkasi-Kasi vishwanathar temple.jpg";
+import img2 from "../Images/Kasi Vishwanathar Temple.jpeg";
 import img3 from "../Images/coutrallm-tiger-falls.webp";
 import img4 from "../Images/Courtallam - Main falls.jpg";
 import img5 from "../Images/coutrallam-shenbahadevi falls.avif";

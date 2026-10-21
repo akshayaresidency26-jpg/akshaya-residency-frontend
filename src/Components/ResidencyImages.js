@@ -4,6 +4,13 @@ import img3 from "../Images/img-11.jpeg";
 import img4 from "../Images/img-14.jpeg";
 import img5 from "../Images/img-8.jpeg";
 import img6 from "../Images/img-15.jpeg";
+import img7 from "../Images/img-2.jpeg";
+import img8 from "../Images/img-3.jpeg";
+import img9 from "../Images/img-9.jpeg";
+import img10 from "../Images/img-7.jpeg";
+import img11 from "../Images/img-12.jpeg";
+import img12 from "../Images/img-10.jpeg";
+
 
 import "../Css/Rooms.css";
 
@@ -33,6 +40,30 @@ function ResidencyImages() {
     {
       image: img6,
       title: "Your Stay Awaits",
+    },
+    {
+      image: img7,
+      title: "Your Stay Awaits",
+    },
+    {
+      image: img8,
+      title: "Clean Bathrooms",
+    },
+    {
+      image: img9,
+      title: "Your Stay Awaits",
+    },
+        {
+      image: img10,
+      title: "Your Stay Awaits",
+    },
+    {
+      image: img11,
+      title: "Memorable Moments",
+    },
+        {
+      image: img12,
+      title: "Comfortable Stay",
     },
   ];
 

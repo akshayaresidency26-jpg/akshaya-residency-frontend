@@ -1,11 +1,11 @@
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import img1 from "../Images/coutrallam-five falls.jpg";
-import img2 from "../Images/Kasi Vishwanathar Temple.jpeg";
-import img3 from "../Images/coutrallm-tiger-falls.webp";
+import img1 from "../Images/1.jpeg";
+import img2 from "../Images/2.jpeg";
+import img3 from "../Images/3.jpeg";
 import img4 from "../Images/Courtallam - Main falls.jpg";
-import img5 from "../Images/coutrallam-shenbahadevi falls.avif";
-import img6 from "../Images/Tenkasi-Thirumali kovil.jpg";
+import img5 from "../Images/5.jpeg";
+import img6 from "../Images/6.jpeg";
 
 function Attractions() {
   const settings = {

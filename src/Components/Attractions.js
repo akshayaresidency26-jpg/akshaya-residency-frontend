@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import img1 from "../Images/1.jpeg";
 import img2 from "../Images/2.jpeg";
 import img3 from "../Images/3.jpeg";
-import img4 from "../Images/Courtallam - Main falls.jpg";
-import img5 from "../Images/5.jpeg";
-import img6 from "../Images/6.jpeg";
+import img4 from "../Images/5.jpeg";
+import img5 from "../Images/6.jpeg";
 
 function Attractions() {
   const settings = {
@@ -38,31 +37,26 @@ function Attractions() {
   const attractions = [
     {
       image: img1,
-      title: "Five Falls",
-      location: "Courtallam",
-    },
-    {
-      image: img2,
-      title: "Kasi Vishwanathar Temple",
-      location: "Tenkasi",
-    },
-    {
-      image: img3,
-      title: "Tiger Falls",
-      location: "Courtallam",
-    },
-    {
-      image: img4,
       title: "Main Falls",
       location: "Courtallam",
     },
     {
-      image: img5,
-      title: "Shenbaga Devi Falls",
+      image: img2,
+      title: "Five Falls",
+      location: "Tenkasi",
+    },
+    {
+      image: img3,
+      title: "Kasi Vishwanathar Temple",
       location: "Courtallam",
     },
     {
-      image: img6,
+      image: img4,
+      title: "Tiger Falls",
+      location: "Courtallam",
+    },
+    {
+      image: img5,
       title: "Thirumalai Kumarasamy Temple",
       location: "Tenkasi",
     },

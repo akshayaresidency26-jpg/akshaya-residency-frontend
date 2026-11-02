@@ -1,9 +1,8 @@
-import mainFalls from "../Images/Courtallam - Main falls.jpg";
-import fiveFalls from "../Images/coutrallam-five falls.jpg";
-import oldFalls from "../Images/Kasi Vishwanathar Temple.jpeg";
-import tigerFalls from "../Images/coutrallam-shenbahadevi falls.avif";
-import shenbagadevi from "../Images/coutrallm-tiger-falls.webp";
-import chitraruvi from "../Images/Tenkasi-Thirumali kovil.jpg";
+import mainFalls from "../Images/1.jpeg";
+import fiveFalls from "../Images/2.jpeg";
+import oldFalls from "../Images/3.jpeg";
+import tigerFalls from "../Images/5.jpeg";
+import tirumalaikovil from "../Images/6.jpeg";
 import "../Css/Explore.css";
 
 function Places() {
@@ -183,61 +182,13 @@ function Places() {
         </div>
 
 
-        {/* Shenbaga Devi Falls */}
+        {/* Tiger Falls */}
         <div className="place-row reverse">
           <div className="place-image-wrapper">
             <span className="place-number">04</span>
 
             <img
               src={tigerFalls}
-              alt="Shenbaga Devi Falls"
-              className="place-img"
-            />
-          </div>
-
-          <div className="place-content">
-
-            <span className="place-location">
-              📍 Courtallam
-            </span>
-
-            <h2>Shenbaga Devi Falls</h2>
-
-            <div className="place-line"></div>
-
-            <p>
-              Shenbaga Devi Falls is a beautiful and scenic waterfall located deep within the forests 
-              of the Western Ghats near Courtallam. Named after Goddess Shenbaga Devi, whose temple is
-              situated close to the waterfall, it is considered both a natural attraction and a sacred
-              pilgrimage site. Reaching the falls requires a moderate trek through dense forests, 
-              offering visitors an adventurous experience surrounded by rich biodiversity and 
-              breathtaking landscapes. The waterfall cascades from a considerable height into a clear
-              pool, creating a peaceful and refreshing atmosphere. The surrounding forests are filled
-              with medicinal plants, colourful flowers, and a variety of birds and wildlife, making 
-              the area attractive to nature lovers and trekkers. Every year, during the Chithirai 
-              Pournami festival, thousands of devotees visit the Shenbaga Devi Temple to seek the 
-              blessings of the goddess. The cool climate, crystal-clear water, and tranquil 
-              surroundings make Shenbaga Devi Falls one of the most beautiful and spiritually 
-              significant waterfalls in the Courtallam region. Combining natural beauty, religious 
-              importance, and adventure, Shenbaga Devi Falls offers visitors a memorable experience 
-              and remains one of the must-visit attractions near Courtallam.
-            </p>
-
-            <span className="place-discover">
-              Explore Attraction <span>→</span>
-            </span>
-
-          </div>
-        </div>
-
-
-        {/* Tiger Falls */}
-        <div className="place-row">
-          <div className="place-image-wrapper">
-            <span className="place-number">05</span>
-
-            <img
-              src={shenbagadevi}
               alt="Tiger Falls"
               className="place-img"
             />
@@ -278,13 +229,60 @@ function Places() {
         </div>
 
 
+        {/* Tiger Falls */}
+        {/* <div className="place-row">
+          <div className="place-image-wrapper">
+            <span className="place-number">05</span>
+
+            <img
+              src={tigerFalls}
+              alt="Tiger Falls"
+              className="place-img"
+            />
+          </div>
+
+          <div className="place-content">
+
+            <span className="place-location">
+              📍 Courtallam
+            </span>
+
+            <h2>Tiger Falls</h2>
+
+            <div className="place-line"></div>
+
+            <p>
+              Tiger Falls, locally known as Puliyaruvi, is one of the most peaceful and 
+              family-friendly waterfalls in Courtallam, located in the Tenkasi district of Tamil Nadu.
+              Situated a short distance from the famous Main Falls, Tiger Falls is known for its 
+              gentle flow of water and calm surroundings, making it an ideal destination for 
+              families with children and elderly visitors. Unlike the larger waterfalls in Courtallam,
+              the water here falls from a lower height, creating a safe and refreshing natural shower.
+              The waterfall is surrounded by lush greenery and the beautiful landscapes of the Western
+              Ghats, providing a cool and relaxing atmosphere throughout the year. The clear water is 
+              believed to possess medicinal qualities because it flows through forests rich in herbal 
+              plants. Visitors enjoy bathing, relaxing, and taking photographs in the serene 
+              environment. The best time to visit Tiger Falls is during the monsoon season, from 
+              June to September, when the water flow is abundant and the surrounding vegetation is 
+              at its greenest. The peaceful ambience, easy accessibility, and natural beauty make 
+              Tiger Falls one of the most popular attractions for tourists visiting Courtallam.
+            </p>
+
+            <span className="place-discover">
+              Explore Attraction <span>→</span>
+            </span>
+
+          </div>
+        </div> */}
+
+
         {/* Thirumalai Kumaraswamy Temple */}
         <div className="place-row reverse">
           <div className="place-image-wrapper">
             <span className="place-number">06</span>
 
             <img
-              src={chitraruvi}
+              src={tirumalaikovil}
               alt="Thirumalai Kumaraswamy Temple"
               className="place-img"
             />
